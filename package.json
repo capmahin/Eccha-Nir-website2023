@@ -8,5 +8,9 @@
   },
   "keywords": [],
   "author": "MahinTechinfo",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "express": "^4.18.2"
+  }
 }
