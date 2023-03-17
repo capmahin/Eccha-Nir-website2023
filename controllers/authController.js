@@ -32,7 +32,9 @@ import userModel from "../models/userModel.js"
             })
         }
         //register user
-        const hashedPassword = await hashPassword()
+        const hashedPassword = await hashPassword(password)
+        //save
+        const user = new userModel({name,email,phone,address,password:hashedPassword})
        
     } catch (error) {
         console.log(error)
