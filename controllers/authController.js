@@ -20,6 +20,9 @@
         if(!address){
             return res.send({error:'Address is Required'})
         }
+
+        //existing user
+        const user = await userModel.findOne({email})
     } catch (error) {
         console.log(error)
         res.status(500).send({
