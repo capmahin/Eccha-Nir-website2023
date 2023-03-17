@@ -9,6 +9,6 @@ export const hashPassword = async (password) =>{
     }
 };
 
-export const comparePassword = async (password,hashPassword) =>{
+export const comparePassword = async (password,hashedPassword) =>{
     
 }
