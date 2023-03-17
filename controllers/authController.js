@@ -21,8 +21,13 @@
             return res.send({error:'Address is Required'})
         }
 
+        //Check User
+        const existingUser = await userModel.findOne({email})
         //existing user
-        const user = await userModel.findOne({email})
+        if(existingUser){
+            
+        }
+       
     } catch (error) {
         console.log(error)
         res.status(500).send({
