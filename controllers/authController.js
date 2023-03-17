@@ -25,7 +25,10 @@
         const existingUser = await userModel.findOne({email})
         //existing user
         if(existingUser){
-            
+            return res.status(200).send({
+                success:true,
+                message:'Already Register Please Login'
+            })
         }
        
     } catch (error) {
