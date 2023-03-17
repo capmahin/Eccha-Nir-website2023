@@ -34,7 +34,7 @@ import userModel from "../models/userModel.js"
         //register user
         const hashedPassword = await hashPassword(password)
         //save
-        const user = new userModel({name,email,phone,address,password:hashedPassword}).save()
+        const user = await new userModel({name,email,phone,address,password:hashedPassword}).save()
 
         res.status(201).send({
             success:true,
