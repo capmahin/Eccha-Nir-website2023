@@ -51,5 +51,14 @@ import JWT from 'jsonwebtoken';
             message:'Error in Registeration',
         })
     }
+};
+
+//POST LOGIN
+export const loginController = async(req,res)=>{
+    try {
+        
+    } catch (error) {
+        console.log(error)
+    }
 }
 
