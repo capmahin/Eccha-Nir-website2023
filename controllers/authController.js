@@ -92,7 +92,7 @@ export const loginController = async(req,res)=>{
                     address:user.address,
                 },
                 token
-            })
+            });
         
     } catch (error) {
         console.log(error)
