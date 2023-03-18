@@ -57,6 +57,13 @@ import JWT from 'jsonwebtoken';
 export const loginController = async(req,res)=>{
     try {
         const {email,password} = req.body
+        //validation
+        if(!email || !password){
+            return res.status(404).send({
+                success:false,
+                message:'Invalid email or password'
+            })
+        }
     } catch (error) {
         console.log(error)
         res.status(500).send({
