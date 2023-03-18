@@ -77,11 +77,23 @@ export const loginController = async(req,res)=>{
             return res.status(200).send({
                 success:false,
                 message:'Invalid Password'
-            })
+            });
+        }
 
             //token
-            const token = await JWT.sign({_id:user._id},process.env.JWT_SECRET,{expiresIn: '10d'})
-        }
+            const token = await JWT.sign({_id:user._id},process.env.JWT_SECRET,{expiresIn: '10d',});
+            res.status(200).send({
+                success:true,
+                message:'Login Successfully',
+                user:{
+                    name:user.name,
+                    email:user.email,
+                    phone:user.phone,
+                    address:user.address,
+                },
+                token
+            })
+        
     } catch (error) {
         console.log(error)
         res.status(500).send({
