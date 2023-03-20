@@ -106,6 +106,6 @@ export const loginController = async(req,res)=>{
 
 //text controller
 export const testController = async (req,res)=>{
-    
+    res.send("protected Route")
 }
 
