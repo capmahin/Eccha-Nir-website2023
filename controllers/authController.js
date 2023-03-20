@@ -102,5 +102,10 @@ export const loginController = async(req,res)=>{
             error,
         })
     }
+};
+
+//text controller
+export const testController = async (req,res)=>{
+    
 }
 
