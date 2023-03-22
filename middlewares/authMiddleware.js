@@ -11,7 +11,7 @@ export const requireSignIn = async (req,res,next) =>{
 };
 
 //admin access
-export const isAdmin = (req,res,next) =>{
+export const isAdmin = async(req,res,next) =>{
     try {
         
     } catch (error) {
