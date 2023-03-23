@@ -27,14 +27,14 @@ const Footer = () => {
         </p>
         <div className="mt-1 text-dark">
           {/* Facebook */}
-          <a type="button" className="btn btn-outline-light btn-floating btn-lg m-1"><FaLinkedin/></a>
+          <a type="button" className="btn btn-outline-light btn-floating  m-1"><FaLinkedin/></a>
           {/* Dribbble */}
-          <a type="button" className="btn btn-outline-light btn-floating btn-lg m-1"><FaFacebook/></a>
+          <a type="button" className="btn btn-outline-light btn-floating  m-1"><FaFacebook/></a>
           {/* Twitter */}
-          <a type="button" className="btn btn-outline-light btn-floating btn-lg m-1"><FaInstagram /></a>
+          <a type="button" className="btn btn-outline-light btn-floating  m-1"><FaInstagram /></a>
           {/* Google + */}
-          <a type="button" className="btn btn-outline-light btn-floating btn-lg m-1"><FaWhatsapp /></a>
-          <a type="button" className="btn btn-outline-light btn-floating btn-lg m-1"><HiOutlineMail /></a>
+          <a type="button" className="btn btn-outline-light btn-floating  m-1"><FaWhatsapp /></a>
+          <a type="button" className="btn btn-outline-light btn-floating  m-1"><HiOutlineMail /></a>
           {/* Linkedin */}
         </div>
       </div>
