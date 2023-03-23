@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     
-  <div className="bg-success text-center text-dark ">
+  <div className="  bg-success text-center text-dark ">
    
   <div className=" text-center text-lg-start" >
   {/* Grid container */}
@@ -45,7 +45,9 @@ const Footer = () => {
         <div className="form-outline form-white mb-4">
           <input type="text" id="formControlLg" className="form-control form-control-lg" />
           <label className="form-label" htmlFor="formControlLg" style={{marginLeft: 0}}>Search</label>
-          <div className="form-notch"><div className="form-notch-leading" style={{width: 9}} /><div className="form-notch-middle" style={{width: '48.8px'}} /><div className="form-notch-trailing" /></div></div>
+          <div className="form-notch"><div className="form-notch-leading" style={{width: 9}} /><div className="form-notch-middle" style={{width: '48.8px'}} /><div className="form-notch-trailing" />
+          {/* <Link type="button" btn btn-outline-light btn-floating to="/about">About</Link> */}
+          </div></div>
        
       </div>
       {/*Grid column*/}
