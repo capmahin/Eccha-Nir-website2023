@@ -8,7 +8,7 @@ const Footer = () => {
     
   <div className="bg-success text-center text-dark p-">
    
-    <div className="container p-4 pb-0">
+    <div className="container p-2 pb-0">
       {/* Section: Social media */}
       <section className="mb-4">
         {/* Facebook */}
@@ -28,7 +28,7 @@ const Footer = () => {
     </div>
     
   
-    <div className="text-center p-3" >
+    <div className="text-center p-1" >
       
       <h4 className="text-center">All Right Reserved &copy; Eccha-Nir</h4> 
     </div>

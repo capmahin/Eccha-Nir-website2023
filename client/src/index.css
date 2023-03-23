@@ -9,3 +9,22 @@
 /* font-family: 'Poppins', sans-serif; */
 /* font-family: 'Playfair Display', serif; */
 /* font-family: 'Great Vibes', cursive; */
+
+/* Navbar css */
+.navbar{
+  font-family: 'Great Vibes', cursive;
+  font-size:26px;
+  line-height: 26px;
+  box-shadow: 0 8px 6px -6px green;
+  background-color: green;
+  --webkit-box-shadow: 0 8px 6px -6px green;
+  border-bottom:  solid green!important;
+  
+}
+.nav-link {
+  font-weight: 300 !important;
+}
+
+.active {
+  border-bottom: 2px solid black;
+}
