@@ -6,8 +6,8 @@ import { HiOutlineMail } from "react-icons/hi";
 const Footer = () => {
   return (
     
-  <div className="bg-success text-center text-dark p-1">
-    {/* Grid container */}
+  <div className="bg-success text-center text-dark p-">
+   
     <div className="container p-4 pb-0">
       {/* Section: Social media */}
       <section className="mb-4">
@@ -26,16 +26,15 @@ const Footer = () => {
       </section>
       {/* Section: Social media */}
     </div>
-    {/* Grid container */}
-    {/* Copyright */}
-    <div className="text-center p-2" >
+    
+  
+    <div className="text-center p-3" >
       
       <h4 className="text-center">All Right Reserved &copy; Eccha-Nir</h4> 
     </div>
-    {/* Copyright */}
-     {/* Footer */}
+   
 
-        {/* */}
+        
   </div>
 
 
