@@ -8,10 +8,11 @@ const Layout = ({children,title,description,keywords,author}) => {
     <div>
       <Helmet>
                 <meta charSet="utf-8" />
-                <title>My Title</title>              
-  <meta name="description" content="Free Web tutorials" />
-  <meta name="keywords" content="HTML, CSS, JavaScript" />
-  <meta name="author" content="John Doe" />        
+                             
+  <meta name="description" content={description} />
+  <meta name="keywords" content={keywords} />
+  <meta name="author" content={author}/>  
+  <title>{title}</title>       
             </Helmet>
         <Header/>
         <main style={{minHeight:"80vh"}}>
