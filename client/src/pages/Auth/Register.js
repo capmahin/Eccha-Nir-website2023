@@ -12,6 +12,7 @@ const Register = () => {
 
     const handleSubmit = (e) =>{
         e.preventDefault();
+        console.log(name,email,password,phone,address)
     }
   return (
     <Layout title="Register-Eccha-Nir">
