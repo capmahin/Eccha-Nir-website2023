@@ -1,7 +1,8 @@
-import React from 'react'
+import React,{useState} from 'react'
 import Layout from './../../components/Layout/Layout';
 
 const Register = () => {
+    const [name,setName] = useState("");
   return (
     <Layout title="Register-Eccha-Nir">
         <div className="register">
