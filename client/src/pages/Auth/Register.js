@@ -20,22 +20,22 @@ const Register = () => {
   </div>
   <div className="mb-3">
     
-    <input type="email" value={email} className="form-control" id="exampleInputEmail" placeholder="Enter Your Email"/>
+    <input type="email" value={email}onChange={(e)=> setEmail(e.target.value)} className="form-control" id="exampleInputEmail" placeholder="Enter Your Email"/>
     
   </div>
   <div className="mb-3">
     
-    <input type="password" value={password} className="form-control" id="exampleInputPassword" placeholder="Enter Your Password" />
+    <input type="password" value={password}  onChange={(e)=> setPassword(e.target.value)} className="form-control" id="exampleInputPassword" placeholder="Enter Your Password" />
   </div>
 
   <div className="mb-3">
     
-    <input type="text" value={phone} className="form-control" id="exampleInputPhone" placeholder="Enter Your Phone Number"/>
+    <input type="text" value={phone} onChange={(e)=> setPhone(e.target.value)} className="form-control" id="exampleInputPhone" placeholder="Enter Your Phone Number"/>
     
   </div>
   <div className="mb-3">
     
-    <input type="text" value={address} className="form-control" id="exampleInputAddress" placeholder="Enter Your Address" />
+    <input type="text" value={address} onChange={(e)=> setAddress(e.target.value)} className="form-control" id="exampleInputAddress" placeholder="Enter Your Address" />
     
   </div>
   <button type="submit" className="btn btn-primary">Submit</button>
