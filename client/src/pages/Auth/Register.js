@@ -3,6 +3,10 @@ import Layout from './../../components/Layout/Layout';
 
 const Register = () => {
     const [name,setName] = useState("");
+    const [email,setEmail] = useState("");
+    const [password,setPassword] = useState("");
+    const [phone,setPhone] = useState("");
+    const [address,setAddress] = useState("");
   return (
     <Layout title="Register-Eccha-Nir">
         <div className="register">
