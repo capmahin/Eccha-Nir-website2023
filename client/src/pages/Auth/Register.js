@@ -3,7 +3,8 @@ import Layout from './../../components/Layout/Layout';
 
 const Register = () => {
   return (
-    <Layout>Register</Layout>
+    <Layout title="Register-Eccha-Nir"><h1>
+        Register Page</h1></Layout>
   )
 }
 
