@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import Layout from './../../components/Layout/Layout';
+import  {toast} from 'react-hot-toast'
 
 const Register = () => {
     const [name,setName] = useState("");
@@ -13,6 +14,7 @@ const Register = () => {
     const handleSubmit = (e) =>{
         e.preventDefault();
         console.log(name,email,password,phone,address)
+        toast.success('Register Successfully')
     }
   return (
     <Layout title="Register-Eccha-Nir">
