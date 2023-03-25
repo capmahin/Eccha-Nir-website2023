@@ -14,7 +14,7 @@ const Register = () => {
             <form>
   <div className="mb-3">
     
-    <input type="text" value={name} className="form-control" id="exampleInputName"
+    <input type="text" value={name} onChange={(e)=> setName(e.target.value)} className="form-control" id="exampleInputName"
     placeholder="Enter Your Name" />
     
   </div>
