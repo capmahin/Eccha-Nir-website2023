@@ -35,9 +35,10 @@ const Register = () => {
     }
   return (
     <Layout title="Register-Eccha-Nir">
-        <div className="register">
-            <h1>Register Page</h1>
+        <div className="form-container" >
+            
             <form onSubmit={handleSubmit}>
+            <h4>REGISTER FORM</h4>
   <div className="mb-3">
     
     <input type="text" value={name} onChange={(e)=> setName(e.target.value)} className="form-control" id="exampleInputName"
