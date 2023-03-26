@@ -7,7 +7,7 @@
     justify-content: center;
     min-height: 80vh;
     flex-direction: column;
-    background-color: #ffdee9;
+    background-color: green;
     background-image: linear-gradient(0deg, greenyellow 0%, green 100%);
   }
   
@@ -17,17 +17,34 @@
     padding: 20px;
     background-color: #fff;
   }
+  .form-container form:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 4px;
+    padding: 20px;
+    background-color: greenyellow;
+  }
+  .form-container form:active {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 4px;
+    padding: 20px;
+    background-color: greenyellow;
+  }
   
   .form-container form .title {
     text-align: center;
     margin-bottom: 15px;
     font-weight: bold;
-    font-family: "Playfair Display", serif;
+    font-family: 'Great Vibes', cursive ;
   }
   
   .form-container form input {
     border: none;
     border-bottom: 1px solid #000;
+    border-radius: 0;
+  }
+  .form-container form input:hover {
+    border: none;
+    border-bottom: 1px solid green;
     border-radius: 0;
   }
   
@@ -55,10 +72,10 @@
   }
   
   .forgot-btn {
-    background-color: #434343a4 !important;
+    background-color: green !important;
     border: 0 !important;
   }
   
   .forgot-btn:hover {
-    color: white !important;
+    color: yellowgreen !important;
   }

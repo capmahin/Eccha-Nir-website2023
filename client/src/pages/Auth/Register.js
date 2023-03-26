@@ -38,7 +38,7 @@ const Register = () => {
         <div className="form-container" >
             
             <form onSubmit={handleSubmit}>
-            <h4>REGISTER FORM</h4>
+            <h3 className="title">Register Form</h3>
   <div className="mb-3">
     
     <input type="text" value={name} onChange={(e)=> setName(e.target.value)} className="form-control" id="exampleInputName"
