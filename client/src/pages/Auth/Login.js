@@ -5,7 +5,7 @@ import axios from 'axios';
 import { useNavigate } from "react-router-dom";
 import "../../styles/AuthStyles.css";
 
-const Register = () => {
+const Login = () => {
     const [name,setName] = useState("");
     const [email,setEmail] = useState("");
     const [password,setPassword] = useState("");
@@ -13,10 +13,9 @@ const Register = () => {
     const [address,setAddress] = useState("");
     const navigate = useNavigate();
 
+     //form function
 
-    //form function
-
-    const handleSubmit = async (e) =>{
+     const handleSubmit = async (e) =>{
         e.preventDefault();
         try {
             const res = await axios.post("/api/v1/auth/register",{
@@ -34,7 +33,7 @@ const Register = () => {
         }
     }
   return (
-    <Layout title="Register-Eccha-Nir">
+    <Layout title="Login-Eccha-Nir">
         <div className="form-container"style={{ minHeight: "90vh" }} >
             
             <form onSubmit={handleSubmit}>
@@ -73,4 +72,4 @@ const Register = () => {
   )
 }
 
-export default Register
+export default Login
