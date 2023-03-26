@@ -3,6 +3,7 @@ import Layout from './../../components/Layout/Layout';
 import  {toast} from 'react-hot-toast';
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
+import "../../styles/AuthStyles.css";
 
 const Register = () => {
     const [name,setName] = useState("");
@@ -21,7 +22,7 @@ const Register = () => {
             const res = await axios.post("/api/v1/auth/register",{
                 name,email,password,phone,address
             })
-            if(res.data.success){
+            if(res && res.data.success){
                 toast.success(res.data.message);
                 navigate("/login");
             }else{
