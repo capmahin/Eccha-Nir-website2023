@@ -5,6 +5,7 @@ import axios from 'axios';
 import { useNavigate } from "react-router-dom";
 import "../../styles/AuthStyles.css";
 
+
 const Login = () => {
     
     const [email,setEmail] = useState("");
@@ -17,12 +18,12 @@ const Login = () => {
      const handleSubmit = async (e) =>{
         e.preventDefault();
         try {
-            const res = await axios.post("/api/v1/auth/register",{
+            const res = await axios.post("/api/v1/auth/login",{
                 email,password
             })
             if(res && res.data.success){
                 toast.success(res.data.message);
-                navigate("/login");
+                navigate("/");
             }else{
                 toast.error(res.data.message)
             }
@@ -33,6 +34,7 @@ const Login = () => {
     }
   return (
     <Layout title="Login-Eccha-Nir">
+       
         <div className="form-container"style={{ minHeight: "90vh" }} >
             
             <form onSubmit={handleSubmit}>

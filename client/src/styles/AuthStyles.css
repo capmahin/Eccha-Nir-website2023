@@ -1,5 +1,11 @@
 /* ===================================
 ========= register page  */
+
+/* login */
+.login-back{
+  background-color: green;
+    background-image: linear-gradient(0deg, greenyellow 0%, green 100%);
+}
 .form-container {
     
     display: flex;
