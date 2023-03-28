@@ -1,18 +1,24 @@
 import React from 'react';
-import ecchaNir from '../../assists/Image/Eccha-nir.jpg'
+import Banner1 from '../../assists/Image/Banner1.png'
+import Banner2 from '../../assists/Image/Banner2.png'
+import Banner3 from '../../assists/Image/Banner3.png'
+import Banner4 from '../../assists/Image/Banner4.png'
 
 const Banner = () => {
   return (
     <div><div id="carouselExampleFade" className="carousel slide carousel-fade">
   <div className="carousel-inner">
     <div className="carousel-item active">
-      <img src={ecchaNir}  className="d-block w-100" height={"300px"} alt="..." />
+      <img src={Banner1}  className="d-block w-100" height={"300px"} alt="..." />
     </div>
     <div className="carousel-item">
-      <img src={ecchaNir} className="d-block w-100" height={"300px"} alt="..." />
+      <img src={Banner2} className="d-block w-100" height={"300px"} alt="..." />
     </div>
     <div className="carousel-item">
-      <img src={ecchaNir} className="d-block w-100" height={"300px"} alt="..." />
+      <img src={Banner3} className="d-block w-100" height={"300px"} alt="..." />
+    </div>
+    <div className="carousel-item">
+      <img src={Banner4} className="d-block w-100" height={"300px"} alt="..." />
     </div>
   </div>
   <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
