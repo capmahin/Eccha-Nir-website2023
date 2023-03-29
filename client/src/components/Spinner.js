@@ -6,7 +6,10 @@ const Spinner = () => {
     const navigate = useNavigate()
 
     useEffect(()=>{
-        
+        const interval = setInterval(()=>{
+            setCount((prevValue)=> --prevValue)
+        },1000);
+        count === 0 && navigate('/login')
     },[])
   return (
     <>
