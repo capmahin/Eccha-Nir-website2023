@@ -128,8 +128,15 @@ try {
         return res.status(404).send({
             success:false,
             message:'Wrong Email or Answer'
-        })
+        });
+
     }
+    const hashed = await hashPassword(newPassword);
+    await userModel.findByIdAndUpdate(user._id, {password: hashed});
+    res.status(200).send({
+        success:true,
+        message:'Password Reset Successfully'
+    });
 } catch (error) {
     console.log(error)
     res.status(500).send({
