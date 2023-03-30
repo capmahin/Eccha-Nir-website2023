@@ -105,6 +105,13 @@ export const loginController = async(req,res)=>{
     }
 };
 
+
+//forgotPasswordController
+
+export const forgotPasswordController = async(req,res)=>{
+
+}
+
 //text controller
 export const testController = async (req,res)=>{
     res.send("protected Route")
