@@ -110,16 +110,25 @@ export const loginController = async(req,res)=>{
 
 export const forgotPasswordController = async(req,res)=>{
 try {
-    const {email,question,newPassword} = req.body
+    const {email,answer,newPassword} = req.body
 
     if(!email){
         res.status(400).send({message:'Email is required'})
     }
-    if(!question){
-        res.status(400).send({message:'Question is required'})
+    if(!answer){
+        res.status(400).send({message:'Answer is required'})
     }
     if(!newPassword){
         res.status(400).send({message:'New Password is required'})
+    }
+    //check
+    const user = await userModel.findOne({email,answer})
+    //validation
+    if(!user){
+        return res.status(404).send({
+            success:false,
+            message:'Wrong Email or Answer'
+        })
     }
 } catch (error) {
     console.log(error)
