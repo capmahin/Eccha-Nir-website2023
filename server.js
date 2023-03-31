@@ -24,12 +24,20 @@ app.use(morgan('dev'));
 app.use('/api/v1/auth',authRoutes)
 
 //rest api
-app.get('/',(req,res)=>{
-    res.send("<h1>Welcome to ecommerce app</h1>")
-});
+// app.get('/',(req,res)=>{
+//     res.send("<h1>Welcome to ecommerce app</h1>")
+// });
 
 //PORT
 const PORT = process.env.PORT || 8080;
+
+
+app.get('/',(req,res)=>{
+    app.use(express.static(path.resolve(__dirname,'client','build')))
+    res.sendFile(path.resolve(__dirname,'client','build','index.html'))
+})
+
+
 
 //run listen
 app.listen(PORT, ()=>{
