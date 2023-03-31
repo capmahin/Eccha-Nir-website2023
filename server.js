@@ -23,10 +23,10 @@ app.use(morgan('dev'));
 //routes
 app.use('/api/v1/auth',authRoutes)
 
-//rest api
-// app.get('/',(req,res)=>{
-//     res.send("<h1>Welcome to ecommerce app</h1>")
-// });
+// rest api
+app.get('/',(req,res)=>{
+    res.send("<h1>Welcome to ecommerce app</h1>")
+});
 
 //PORT
 const PORT = process.env.PORT || 8080;
