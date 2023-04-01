@@ -32,10 +32,11 @@ app.get('/',(req,res)=>{
 const PORT = process.env.PORT || 8080;
 
 
-app.get('/',(req,res)=>{
-    app.use(express.static(path.resolve(__dirname,'client','build')))
-    res.sendFile(path.resolve(__dirname,'client','build','index.html'))
-})
+// for deployment in vercel 
+// app.get('/',(req,res)=>{
+//     app.use(express.static(path.resolve(__dirname,'client','build')))
+//     res.sendFile(path.resolve(__dirname,'client','build','index.html'))
+// })
 
 
 
