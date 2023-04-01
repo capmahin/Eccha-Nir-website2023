@@ -5,7 +5,7 @@ import JWT from 'jsonwebtoken';
  
  export const registerController = async(req,res) =>{
     try {
-        const {name,email,password,phone,address} = req.body
+        const {name,email,password,phone,address,answer} = req.body
         //validations
         if(!name){
             return res.send({message:'Name is Required'})
@@ -22,6 +22,9 @@ import JWT from 'jsonwebtoken';
         if(!address){
             return res.send({message:'Address is Required'})
         }
+        if(!answer){
+            return res.send({message:'Answer is Required'})
+        }
 
         //Check User
         const existingUser = await userModel.findOne({email})
@@ -35,7 +38,7 @@ import JWT from 'jsonwebtoken';
         //register user
         const hashedPassword = await hashPassword(password)
         //save
-        const user = await new userModel({name,email,phone,address,password:hashedPassword}).save()
+        const user = await new userModel({name,email,phone,address,password:hashedPassword,answer}).save()
 
         res.status(201).send({
             success:true,
@@ -91,6 +94,7 @@ export const loginController = async(req,res)=>{
                     email:user.email,
                     phone:user.phone,
                     address:user.address,
+                    
                 },
                 token
             });
@@ -110,13 +114,13 @@ export const loginController = async(req,res)=>{
 
 export const forgotPasswordController = async(req,res)=>{
 try {
-    const {email,password,newPassword} = req.body
+    const {email,answer,newPassword} = req.body
 
     if(!email){
         res.status(400).send({message:'Email is required'})
     }
-    if(!password){
-        res.status(400).send({message:'password is required'})
+    if(!answer){
+        res.status(400).send({message:'Answer is required'})
     }
     if(!newPassword){
         res.status(400).send({message:'New Password is required'})
@@ -127,7 +131,7 @@ try {
     if(!user){
         return res.status(404).send({
             success:false,
-            message:'Wrong Email or password'
+            message:'Wrong Email or answer'
         });
 
     }
