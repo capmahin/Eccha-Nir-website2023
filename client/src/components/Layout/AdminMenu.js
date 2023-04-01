@@ -4,15 +4,16 @@ import { NavLink } from 'react-router-dom';
 const AdminMenu = () => {
   return (
     <>
+    <div className="text-center">
     <div className="list-group">
-  <NavLink to="#" className="list-group-item list-group-item-action active" aria-current="true">
-    The current link item
-  </NavLink>
+  <h4>Admin Panel</h4>
   <NavLink to="#" className="list-group-item list-group-item-action">Create Category</NavLink>
   <NavLink to="#" className="list-group-item list-group-item-action">Create Product</NavLink>
   <NavLink to="#" className="list-group-item list-group-item-action">Users</NavLink>
   
 </div>
+    </div>
+    
 
 
     </>
