@@ -36,7 +36,7 @@ const Login = () => {
             }
         } catch (error) {
             console.log(error)
-            toast.error("Somthing went worng")
+            toast.error("Something went wrong")
         }
     }
   return (
@@ -59,6 +59,9 @@ const Login = () => {
 
  
   
+  <button type="button" className="btn btn-primary"
+  onClick={()=>{navigate('/forgot-password')}}
+  >Forgot Password</button>
   <button type="submit" className="btn btn-primary">Login</button>
 </form>
 
