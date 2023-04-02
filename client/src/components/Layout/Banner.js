@@ -6,7 +6,10 @@ import Banner4 from '../../assists/Image/Banner4.png'
 
 const Banner = () => {
   return (
-    <div><div id="carouselExampleFade" className="carousel slide carousel-fade">
+    <div><div id="carouselExampleFade" className="carousel slide carousel-fade"
+  data-bs-ride="true"
+
+>
   <div className="carousel-inner">
     <div className="carousel-item active">
       <img src={Banner1}  className="d-block w-100" height={"300px"} alt="..." />
