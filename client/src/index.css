@@ -12,7 +12,7 @@
 
 /* Navbar css */
 .navbar{
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Poppins', sans-serif;
   font-size:20px;
   line-height: 26px;
   box-shadow: 0 8px 6px -6px green;
@@ -26,14 +26,26 @@
 }
 
 .active {
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid black;
 }
 
 .navbar-brand {
   font-weight: 700;
-  font-family: 'Poppins', sans-serif;;
+  font-family: 'Great Vibes', cursive;
   letter-spacing: 3px;
 }
+
+.dropdown-menu{
+  background-color: green;
+}
+.dropdown-menu :hover{
+  background-color: greenyellow;
+}
+.dropdown-menu :active{
+  background-color: greenyellow;
+}
+
+
 
 /* =================================
 ======== page not found css ======= */

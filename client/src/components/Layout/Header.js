@@ -1,7 +1,8 @@
 import React from 'react'
 import { NavLink,Link } from "react-router-dom"
-import {AiFillShopping} from 'react-icons/ai';
+
 import { useAuth } from "../../context/auth";
+import Ecche from '../../assists/Image/Eccha-nir.jpg'
 
 const Header = () => {
   const [auth,setAuth] = useAuth();
@@ -19,7 +20,7 @@ const Header = () => {
       <span className="navbar-toggler-icon" />
     </button>
     <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-      <Link to="/" className="navbar-brand fs-2" ><AiFillShopping/> Eccha Nir</Link>
+      <Link to="/" className="navbar-brand fs-2" ><img src={Ecche} alt="" height={'50px'} /> Ecche Nir</Link>
       <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
         <li className="nav-item">
           <NavLink to="/"  className="nav-link " >Home</NavLink>
