@@ -29,14 +29,10 @@ app.get('/',(req,res)=>{
 });
 
 //PORT
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 9000;
 
 
-// for deployment in vercel 
-// app.get('/',(req,res)=>{
-//     app.use(express.static(path.resolve(__dirname,'client','build')))
-//     res.sendFile(path.resolve(__dirname,'client','build','index.html'))
-// })
+
 
 
 
