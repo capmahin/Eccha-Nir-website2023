@@ -29,4 +29,19 @@ export const createCategoryController = async (req,res) =>{
             message:'Error in Category'
         })
     }
+};
+
+//updateCategoryController
+export const updateCategoryController = async(req,res)=>{
+    try {
+        
+    } catch (error) {
+        console.log(error)
+        res.status(500).send({
+            success:false,
+            message:'Error in Updating category',
+            error,
+
+        })
+    }
 }
