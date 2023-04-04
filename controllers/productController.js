@@ -1,3 +1,4 @@
+import slugify from "slugify";
 import productModel from "../models/productModel.js";
 import fs from 'fs';
 
@@ -9,8 +10,7 @@ export const createProductController = async(req,res)=>{
         switch(true){
             case !name:
                 return res.status(500).send({error:'Name required'})
-            case !slug:
-                return res.status(500).send({error:'Slug required'})
+            
             case !description:
                 return res.status(500).send({error:'Description required'})
             case !price:
@@ -19,10 +19,17 @@ export const createProductController = async(req,res)=>{
                 return res.status(500).send({error:'Category required'})
             case !quantity:
                 return res.status(500).send({error:'Quantity required'})
-            case !shipping:
-                return res.status(500).send({error:'Shipping required'})
+                case photo && photo.size > 1000000:
+                    return res
+                      .status(500)
+                      .send({ error: "photo is Required and should be less then 1mb" });
         }
-        const products = await productModel
+        const products = new productModel({...req.fields, slug:slugify(name)})
+        if(photo){
+            products.photo.data = fs.readFileSync(photo.path)
+            products.contentType = photo.type
+        }
+        await products.save()
     } catch (error) {
         console.log(error)
         res.send(500).send({
