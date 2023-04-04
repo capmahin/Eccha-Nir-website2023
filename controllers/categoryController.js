@@ -71,4 +71,19 @@ export const categoryController = async(req,res)=>{
             error,
         })
     }
+};
+
+//singleCategoryController
+
+export const singleCategoryController = async(req,res)=>{
+    try {
+        
+    } catch (error) {
+        console.log(error)
+        res.status(500).send({
+            success:false,
+            message:'Get error in single category',
+            error,
+        })
+    }
 }
