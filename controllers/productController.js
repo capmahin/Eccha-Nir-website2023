@@ -1,4 +1,5 @@
-import productModel from "../models/productModel.js"
+import productModel from "../models/productModel.js";
+import fs from 'fs';
 
 export const createProductController = async(req,res)=>{
     try {
