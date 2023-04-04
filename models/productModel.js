@@ -30,8 +30,11 @@ const productSchema = new mongoose.Schema({
     photo:{
         type:Buffer,
         contentType:String
+    },
+    shipping:{
+        type:Boolean
     }
 
-})
+},{timestamps:true})
 
 export default mongoose.model('Products', productSchema)
