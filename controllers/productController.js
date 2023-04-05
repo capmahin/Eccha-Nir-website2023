@@ -49,7 +49,7 @@ export const createProductController = async(req,res)=>{
 
 export const getProductController = async(req,res)=>{
     try {
-        
+        const products = await productModel.find({}).select("-photo").limit(20).sort({createdAt:-1})
     } catch (error) {
         console.log(error)
         res.status(500).send({
