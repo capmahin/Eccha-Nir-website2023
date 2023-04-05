@@ -106,4 +106,19 @@ export const productPhotoController = async(req,res)=>{
             error,
         })
     }
+};
+
+//deleteProductController
+
+export const deleteProductController = async(req,res)=>{
+    try {
+        
+    } catch (error) {
+        console.log(error)
+        res.status(500).send({
+            success:false,
+            message:'Error while deleting product',
+            error,
+        })
+    }
 }
