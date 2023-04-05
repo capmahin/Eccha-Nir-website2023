@@ -9,6 +9,8 @@ const router = express.Router();
 
 //create product
 router.post('/create-product', requireSignIn,isAdmin,formidable(), createProductController);
+//Update product
+router.put('/update-product/:pid', requireSignIn,isAdmin,formidable(), updateProductController);
 
 //get products
 router.get('/get-product',getProductController);
