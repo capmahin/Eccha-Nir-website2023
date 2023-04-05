@@ -13,6 +13,9 @@ router.post('/create-product', requireSignIn,isAdmin,formidable(), createProduct
 //get products
 router.get('/get-product',getProductController)
 
+//single products
+
+router.get('/get-product/:slug',getSingleProductController)
 
 
 export default router;
