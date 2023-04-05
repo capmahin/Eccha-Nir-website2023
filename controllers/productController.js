@@ -87,4 +87,19 @@ export const getSingleProductController = async(req,res)=>{
             error,
         })
     }
+};
+
+//get productPhotoController
+
+export const productPhotoController = async(req,res)=>{
+    try {
+        
+    } catch (error) {
+        console.log(error)
+        res.status(500).send({
+            success:false,
+            message:'Error in get photo',
+            error,
+        })
+    }
 }
