@@ -11,11 +11,14 @@ const router = express.Router();
 router.post('/create-product', requireSignIn,isAdmin,formidable(), createProductController);
 
 //get products
-router.get('/get-product',getProductController)
+router.get('/get-product',getProductController);
 
 //single products
 
-router.get('/get-product/:slug',getSingleProductController)
+router.get('/get-product/:slug',getSingleProductController);
+
+//get photo
+router.get('/product-photo/:pid',productPhotoController);
 
 
 export default router;
