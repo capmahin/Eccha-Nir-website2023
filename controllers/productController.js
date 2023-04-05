@@ -129,3 +129,7 @@ export const deleteProductController = async(req,res)=>{
 };
 
 //updateProductController
+
+export const updateProductController = async(req,res)=>{
+    
+}
