@@ -14,7 +14,10 @@ const CreateCategory = () => {
     try {
       const {data} = await axios.post('/api/v1/category/create-category',{name});
       if(data?.success){
-        
+        toast.success(`${name} is created`);
+        getAllCategory();
+      }else{
+        toast.error(data.message);
       }
     } catch (error) {
       console.log(error);
