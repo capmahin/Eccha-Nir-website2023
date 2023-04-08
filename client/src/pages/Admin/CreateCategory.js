@@ -52,7 +52,9 @@ const CreateCategory = () => {
           <h1>Create Category</h1>
           <div className="p-3 w-50">
              <CategoryForm
-             
+             handleSubmit={handleSubmit}
+             value={name}
+             setValue={setName}
              />
           </div>
           <div className="w-75">
