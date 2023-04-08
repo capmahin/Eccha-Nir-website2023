@@ -73,7 +73,10 @@ const CreateCategory = () => {
         <>
         <tr>
         <td key={c._id}>{c.name}</td>
-        <td><button className="btn btn-success">Edit</button></td>
+        <td><button className="btn btn-success ms-2">Edit</button>
+        <button className="btn btn-danger ms-2">Delete</button>
+        </td>
+        
         </tr>
         </>
       ))
