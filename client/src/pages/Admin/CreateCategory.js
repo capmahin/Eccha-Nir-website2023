@@ -120,7 +120,11 @@ const CreateCategory = () => {
                               setUpdatedName(c.name);
                               setSelected(c);
                             }}>Edit</button>
-        <button className="btn btn-danger ms-2">Delete</button>
+        <button className="btn btn-danger ms-2"
+        onClick={() => {
+          handleDelete(c._id);
+        }}
+        >Delete</button>
         </td>
         
         </tr>
