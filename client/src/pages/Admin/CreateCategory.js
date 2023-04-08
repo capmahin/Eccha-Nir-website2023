@@ -50,7 +50,7 @@ const CreateCategory = () => {
    
   const handleUpdate = async(e) =>{
     try {
-      const {data} = await axios.put(`/api/v1/category/update-category/${selected._id}`)
+      const {data} = await axios.put(`/api/v1/category/update-category/${selected._id}`,{ name: updatedName })
     } catch (error) {
       console.log(error)
       toast.error("Somtihing went wrong");
