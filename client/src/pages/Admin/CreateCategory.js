@@ -64,7 +64,25 @@ const CreateCategory = () => {
       console.log(error)
       toast.error("Somtihing went wrong");
     }
-  }
+  };
+
+   //delete category
+   const handleDelete = async (pId) => {
+    try {
+      const { data } = await axios.delete(
+        `/api/v1/category/delete-category/${pId}`
+      );
+      if (data?.success) {
+        toast.success(`category is deleted`);
+
+        getAllCategory();
+      } else {
+        toast.error(data.message);
+      }
+    } catch (error) {
+      toast.error("Sometihing went wrong");
+    }
+  };
   return (
     <Layout title={'Dashboard-Create Category'}>
       <div className="container-fluid m-3 p-3">
