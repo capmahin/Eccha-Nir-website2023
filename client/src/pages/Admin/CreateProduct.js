@@ -34,6 +34,34 @@ const CreateProduct = () => {
   useEffect(() => {
     getAllCategory();
   }, []);
+
+  //create product function
+  const handleCreate = async (e) => {
+    e.preventDefault();
+    try {
+      const productData = new FormData();
+      productData.append("name", name);
+      productData.append("description", description);
+      productData.append("price", price);
+      productData.append("quantity", quantity);
+      productData.append("photo", photo);
+      productData.append("category", category);
+      const { data } = axios.post(
+        "/api/v1/product/create-product",
+        productData
+      );
+      if (data?.success) {
+        toast.error(data?.message);
+      } else {
+        toast.success("Product Created Successfully");
+        navigate("/dashboard/admin/products");
+      }
+    } catch (error) {
+      console.log(error);
+      toast.error("something went wrong");
+    }
+  };
+
   return (
     <Layout title={'Dashboard-Create Product'}>
       <div className="container-fluid m-3 p-3">
@@ -135,6 +163,11 @@ const CreateProduct = () => {
                   <Option value="0">No</Option>
                   <Option value="1">Yes</Option>
                 </Select>
+              </div>
+              <div className="mb-3">
+                <button className="btn btn-success" onClick={handleCreate}>
+                  CREATE PRODUCT
+                </button>
               </div>
         </div>
       </div>
