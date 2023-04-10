@@ -3,8 +3,12 @@ import AdminMenu from "../../components/Layout/AdminMenu"
 import Layout from "../../components/Layout/Layout";
 import axios from "axios";
 import toast from 'react-hot-toast'
+import { Select } from "antd";
+import { useNavigate } from "react-router-dom";
+const { Option } = Select;
 
 const CreateProduct = () => {
+  const navigate = useNavigate();
   const [categories, setCategories] = useState([]);
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
@@ -23,7 +27,7 @@ const CreateProduct = () => {
       }
     } catch (error) {
       console.log(error);
-      toast.error("Something wwent wrong in getting catgeory");
+      toast.error("Something went wrong in getting category");
     }
   };
 
