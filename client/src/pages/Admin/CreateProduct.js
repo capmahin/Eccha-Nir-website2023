@@ -13,6 +13,23 @@ const CreateProduct = () => {
   const [quantity, setQuantity] = useState("");
   const [shipping, setShipping] = useState("");
   const [photo, setPhoto] = useState("");
+
+  //get all category
+  const getAllCategory = async () => {
+    try {
+      const { data } = await axios.get("/api/v1/category/get-category");
+      if (data?.success) {
+        setCategories(data?.category);
+      }
+    } catch (error) {
+      console.log(error);
+      toast.error("Something wwent wrong in getting catgeory");
+    }
+  };
+
+  useEffect(() => {
+    getAllCategory();
+  }, []);
   return (
     <Layout title={'Dashboard-Create Product'}>
       <div className="container-fluid m-3 p-3">
