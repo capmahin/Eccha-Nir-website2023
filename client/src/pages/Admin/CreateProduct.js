@@ -61,7 +61,7 @@ const CreateProduct = () => {
                 ))}
               </Select>
               <div className="mb-3">
-                <label className="btn btn-outline-success col-md-12">
+                <label className="btn btn-outline-success  col-md-12">
                   {photo ? photo.name : "Upload Photo"}
                   <input
                     type="file"
@@ -71,6 +71,18 @@ const CreateProduct = () => {
                     hidden
                   />
                 </label>
+              </div>
+              <div className="mb-3">
+                {photo && (
+                  <div className="text-center">
+                    <img
+                      src={URL.createObjectURL(photo)}
+                      alt="product_photo"
+                      height={"200px"}
+                      className="img img-responsive"
+                    />
+                  </div>
+                )}
               </div>
         </div>
       </div>
