@@ -61,7 +61,7 @@ const CreateProduct = () => {
                 ))}
               </Select>
               <div className="mb-3">
-                <label className="btn btn-outline-secondary col-md-12">
+                <label className="btn btn-outline-success col-md-12">
                   {photo ? photo.name : "Upload Photo"}
                   <input
                     type="file"
