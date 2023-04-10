@@ -43,7 +43,7 @@ const CreateProduct = () => {
       </div>
       <div className="col-md-9">
         <h1>Create Product</h1>
-        <div className="m-1">
+        <div className="m-1 w-75">
            <Select
                 bordered={false}
                 placeholder="Select a category"
@@ -60,6 +60,18 @@ const CreateProduct = () => {
                   </Option>
                 ))}
               </Select>
+              <div className="mb-3">
+                <label className="btn btn-outline-secondary col-md-12">
+                  {photo ? photo.name : "Upload Photo"}
+                  <input
+                    type="file"
+                    name="photo"
+                    accept="image/*"
+                    onChange={(e) => setPhoto(e.target.files[0])}
+                    hidden
+                  />
+                </label>
+              </div>
         </div>
       </div>
     </div>
