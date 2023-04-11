@@ -41,12 +41,14 @@ const Products = () => {
                   <img
                     src={`/api/v1/product/product-photo/${p._id}`}
                     className="card-img-top"
-                    height={"200px"}
+                    height={"150px"}
                     alt={p.name}
                   />
                   <div className="card-body">
-                    <h5 className="card-title">{p.name}</h5>
-                    <p className="card-text">{p.description}</p>
+                    <h5 className="card-title">Name: {p.name}</h5>
+                    <p className="card-text">Description: {p.description}</p>
+                    <p className="card-text">Quantity: {p.quantity}</p>
+                    <p className="card-text">Price: {p.price}Taka</p>
                   </div>
                 </div>
               </Link>
