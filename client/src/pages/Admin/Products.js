@@ -24,7 +24,8 @@ const Products = () => {
   }, []);
   return (
     <Layout>
-        <div className="row">
+      <div className="container-fluid m-3 p-3">
+      <div className="row">
             <div className="col-md-3">
                 <AdminMenu/>
             </div>
@@ -46,6 +47,7 @@ const Products = () => {
                   />
                   <div className="card-body">
                     <h5 className="card-title">Name: {p.name}</h5>
+                    
                     <p className="card-text">Description: {p.description}</p>
                     <p className="card-text">Quantity: {p.quantity}</p>
                     <p className="card-text">Price: {p.price}Taka</p>
@@ -56,6 +58,8 @@ const Products = () => {
           </div>
             </div>
         </div>
+      </div>
+        
     </Layout>
   )
 }
