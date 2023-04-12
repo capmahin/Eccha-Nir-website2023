@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Banner from "../components/Layout/Banner";
 import Layout from "../components/Layout/Layout"
-import { useAuth } from "../context/auth" 
+import { Prices } from "../components/Prices"; 
 import axios from "axios";
 import { Checkbox, Radio } from "antd";
 const HomePage = () => {
@@ -64,7 +64,7 @@ const HomePage = () => {
   return (
     <Layout>
       <Banner/>
-       <div className="row mt-3">
+       <div className="container-fluid row mt-3">
         <div className="col-md-2">
           <h6>Search By Category</h6>
           <div className="d-flex flex-column">
@@ -75,6 +75,25 @@ const HomePage = () => {
               </Checkbox>
             ))
           }
+          </div>
+           {/* price filter */}
+           <h6 className="text-center mt-4">Search By Price</h6>
+          <div className="d-flex flex-column">
+            <Radio.Group onChange={(e) => setRadio(e.target.value)}>
+              {Prices?.map((p) => (
+                <div key={p._id}>
+                  <Radio value={p.array}>{p.name}</Radio>
+                </div>
+              ))}
+            </Radio.Group>
+          </div>
+          <div className="d-flex flex-column">
+            <button
+              className="btn btn-success mt-1"
+              onClick={() => window.location.reload()}
+            >
+              RESET 
+            </button>
           </div>
         </div>
         <div className="col-md-10">
