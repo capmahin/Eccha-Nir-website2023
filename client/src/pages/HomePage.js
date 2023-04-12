@@ -49,6 +49,13 @@ const HomePage = () => {
        <div className="row mt-3">
         <div className="col-md-3">
           <h6>Search By Category</h6>
+          {
+            categories?.map((c)=>(
+              <Checkbox key={c._id} onChange={(e)=> console.log(e)}>
+                {c.name}
+              </Checkbox>
+            ))
+          }
         </div>
         <div className="col-md-9">
           <h1 className="text-center">All Products</h1>
