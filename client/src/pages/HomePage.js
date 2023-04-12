@@ -27,13 +27,22 @@ const HomePage = () => {
 
   useEffect(() => {
     getAllCategory();
-    getTotal();
+    // getTotal();
   }, []);
   return (
     <Layout>
       <Banner/>
-        <h1>Home page</h1>
-        <pre>{JSON.stringify(auth,null,4)}</pre>
+       <div className="row">
+        <div className="col-md-3">
+          <h6>Search By Category</h6>
+        </div>
+        <div className="col-md-9">
+          <h1 className="text-center">All Products</h1>
+          <div className="d-flex flex-wrap">
+            <h1>products</h1>
+          </div>
+        </div>
+       </div>
     </Layout>
   )
 }
