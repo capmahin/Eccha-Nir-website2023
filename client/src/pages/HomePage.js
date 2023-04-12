@@ -29,10 +29,24 @@ const HomePage = () => {
     getAllCategory();
     // getTotal();
   }, []);
+
+  //get products
+  const getAllProducts = async () =>{
+    try {
+      const {data} = await axios.get("/api/v1/product/get-product");
+      setProducts(data.products);
+    } catch (error) {
+      console.log(error)
+    }
+  };
+
+  useEffect(()=>{
+    getAllProducts();
+  })
   return (
     <Layout>
       <Banner/>
-       <div className="row">
+       <div className="row mt-3">
         <div className="col-md-3">
           <h6>Search By Category</h6>
         </div>
