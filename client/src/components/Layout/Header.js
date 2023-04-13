@@ -24,9 +24,9 @@ const Header = () => {
       <Link to="/" className="navbar-brand fs-2" ><img src={Ecche} alt="" height={'50px'} /> Ecche Nir</Link>
      
       <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li className="nav-item p-2 ">
+        
         <SearchInput/>
-        </li>
+        
         <li className="nav-item">
           <NavLink to="/"  className="nav-link " >Home</NavLink>
         </li>
