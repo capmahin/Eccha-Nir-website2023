@@ -4,7 +4,10 @@ import Layout from "../components/Layout/Layout"
 import { Prices } from "../components/Prices"; 
 import axios from "axios";
 import { Checkbox, Radio } from "antd";
+import { useNavigate } from "react-router-dom";
+
 const HomePage = () => {
+  const navigate = useNavigate();
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [checked, setChecked] = useState([]);
@@ -188,8 +191,11 @@ const HomePage = () => {
                     <p className="card-text">Description: {p.description}</p>
                     <p className="card-text">Quantity: {p.quantity}</p>
                     <p className="card-text">Price: {p.price}Taka</p>
-                    <button class="btn btn-success ms-1">More Details</button>
-                  <button class="btn btn-secondary ms-1">ADD TO CART</button>
+                    <div>
+                   <button className="btn btn-success ms-1" onClick={() => navigate(`/product/${p.slug}`)}>More Details</button>
+                   <button className="btn btn-secondary ms-1">ADD TO CART</button>
+                  </div>
+
                   </div>
                 </div>
               
