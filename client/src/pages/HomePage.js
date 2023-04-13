@@ -193,7 +193,7 @@ const HomePage = () => {
                     <p className="card-text">Price: {p.price}Taka</p>
                     <div>
                    <button className="btn btn-success ms-1" onClick={() => navigate(`/product/${p.slug}`)}>More Details</button>
-                   <button className="btn btn-secondary ms-1">ADD TO CART</button>
+                   
                   </div>
 
                   </div>

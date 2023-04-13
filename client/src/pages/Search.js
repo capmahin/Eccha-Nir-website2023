@@ -1,8 +1,10 @@
 import React from "react";
 import Layout from "./../components/Layout/Layout";
 import { useSearch } from "../context/search";
+import {  useNavigate } from "react-router-dom";
 const Search = () => {
   const [values, setValues] = useSearch();
+  const navigate = useNavigate();
   return (
     <Layout title={"Search results"}>
       <div className="container">
@@ -27,8 +29,8 @@ const Search = () => {
                     <p className="card-text">Description: {p.description}</p>
                     <p className="card-text">Quantity: {p.quantity}</p>
                     <p className="card-text">Price: {p.price}Taka</p>
-                  <button class="btn btn-success ms-1">More Details</button>
-                  <button class="btn btn-secondary ms-1">ADD TO CART</button>
+                  <button class="btn btn-success ms-1" onClick={() => navigate(`/product/${p.slug}`)}>More Details</button>
+                  
                 </div>
               </div>
             ))}
