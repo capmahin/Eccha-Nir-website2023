@@ -3,6 +3,7 @@ import {  FaLinkedin,FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa"
 import { HiOutlineMail } from "react-icons/hi";
 import {AiFillHome} from 'react-icons/ai'
 import { Link } from "react-router-dom";
+import SearchInput from "../Form/SearchInput";
 
 const Footer = () => {
   return (
@@ -42,12 +43,7 @@ const Footer = () => {
       {/*Grid column*/}
       <div className="col-lg-4 col-md-6 mb-4 mb-md-0">
         <h5 className="text-uppercase mb-4 pb-1">Search something</h5>
-        <div className="form-outline form-white mb-4">
-          <input type="text" id="formControlLg" className="form-control form-control-lg" />
-          <label className="form-label" htmlFor="formControlLg" style={{marginLeft: 0}}>Search</label>
-          <div className="form-notch"><div className="form-notch-leading" style={{width: 9}} /><div className="form-notch-middle" style={{width: '48.8px'}} /><div className="form-notch-trailing" />
-          {/* <Link type="button" btn btn-outline-light btn-floating to="/about">About</Link> */}
-          </div></div>
+        <SearchInput/>
        
       </div>
       {/*Grid column*/}
