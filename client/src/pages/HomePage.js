@@ -5,6 +5,8 @@ import { Prices } from "../components/Prices";
 import axios from "axios";
 import { Checkbox, Radio } from "antd";
 import { useNavigate } from "react-router-dom";
+import "../styles/Homepage.css";
+import { AiOutlineReload } from "react-icons/ai"
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -141,9 +143,9 @@ const HomePage = () => {
   return (
     <Layout>
       <Banner/>
-       <div className="container-fluid row mt-3">
-        <div className="col-md-2">
-          <h6>Search By Category</h6>
+       <div className="container-fluid row mt-3 home-page">
+        <div className="col-md-2 filters">
+          <h6 className="text-center">Search By Category</h6>
           <div className="d-flex flex-column">
           {
             categories?.map((c)=>(
@@ -174,11 +176,11 @@ const HomePage = () => {
           </div>
         </div>
         <div className="col-md-10">
-          <h1 className="text-center">All Products</h1>
+          <h1 className="text-center">!! Ecche Nir Products !!</h1>
           <div className="d-flex flex-wrap">
           {products?.map((p) => (
              
-                <div className="card m-2" style={{ width: "18rem" }}>
+                <div className="card m-2" key={p._id} style={{ width: "18rem" }}>
                   <img
                     src={`/api/v1/product/product-photo/${p._id}`}
                     className="card-img-top"
@@ -186,11 +188,13 @@ const HomePage = () => {
                     alt={p.name}
                   />
                   <div className="card-body">
-                    <h5 className="card-title">Name: {p.name}</h5>
-                    
-                    <p className="card-text">Description: {p.description}</p>
-                    <p className="card-text">Quantity: {p.quantity}</p>
+                    <div className="card-name-price"><h5 className="card-title">Name: {p.name}</h5>
                     <p className="card-text">Price: {p.price}Taka</p>
+                    </div>
+                    
+                    {/* <p className="card-text">Description: {p.description}</p>
+                    <p className="card-text">Quantity: {p.quantity}</p> */}
+                    
                     <div>
                    <button className="btn btn-success ms-1" onClick={() => navigate(`/product/${p.slug}`)}>More Details</button>
                    
@@ -204,13 +208,20 @@ const HomePage = () => {
            <div className="m-2 p-3">
             {products && products.length < total && (
               <button
-                className="btn btn-warning"
+                className="btn loadmore"
                 onClick={(e) => {
                   e.preventDefault();
                   setPage(page + 1);
                 }}
               >
-                {loading ? "Loading ..." : "Loadmore"}
+                 {loading ? (
+                  "Loading ..."
+                ) : (
+                  <>
+                    {" "}
+                    Loadmore <AiOutlineReload />
+                  </>
+                )}
               </button>
             )}
           </div>
