@@ -7,6 +7,7 @@ import { Checkbox, Radio } from "antd";
 import { useNavigate } from "react-router-dom";
 import "../styles/Homepage.css";
 import { AiOutlineReload } from "react-icons/ai"
+import LatestProduct from "./LatestProduct";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -227,6 +228,7 @@ const HomePage = () => {
           </div>
         </div>
        </div>
+       <LatestProduct/>
     </Layout>
   )
 }
