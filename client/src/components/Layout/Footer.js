@@ -19,23 +19,19 @@ const Footer = () => {
       <div className="col-lg-4 col-md-12 mb-4 mb-md-0">
         <h5 className="text-uppercase mb-4">About company</h5>
         <p>
-          At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-          voluptatum deleniti atque corrupti.
+        আপনার কষ্টের টাকায় সঠিক পন্য প্রদানে আমরা প্রতিশ্রুতিওবদ্ধ ।
+Always Stay as With EccheNir
         </p>
-        <p>
-          Blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas
-          molestias.
-        </p>
+        
         <div className="mt-1 text-dark">
           {/* Facebook */}
-          <a type="button" className="btn btn-outline-light btn-floating  m-1"><FaLinkedin/></a>
-          {/* Dribbble */}
-          <a type="button" className="btn btn-outline-light btn-floating  m-1"><FaFacebook/></a>
+          
+          <a type="button" className="btn btn-outline-light btn-floating  m-1" href="https://www.facebook.com/ecchenir.com.bd/?ref=page_internal"><FaFacebook/></a>
           {/* Twitter */}
-          <a type="button" className="btn btn-outline-light btn-floating  m-1"><FaInstagram /></a>
+          <a type="button" className="btn btn-outline-light btn-floating  m-1" href="https://www.instagram.com/ecchenir/?fbclid=IwAR0dOUlGP_uyf4SBGlCML9Y4BYMyNcxL8F_qI6njM5uJ8fpFF2E-7GCGiBs"><FaInstagram /></a>
           {/* Google + */}
-          <a type="button" className="btn btn-outline-light btn-floating  m-1"><FaWhatsapp /></a>
-          <a type="button" className="btn btn-outline-light btn-floating  m-1"><HiOutlineMail /></a>
+          
+          <a type="button" className="btn btn-outline-light btn-floating  m-1" href="https://www.ecchenir@gmail.com"><HiOutlineMail /></a>
           {/* Linkedin */}
         </div>
       </div>

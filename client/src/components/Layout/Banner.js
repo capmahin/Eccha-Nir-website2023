@@ -6,7 +6,8 @@ import Banner4 from '../../assists/Image/Banner4.png'
 
 const Banner = () => {
   return (
-    <div><div id="carouselExampleFade" className="carousel slide carousel-fade"
+    <div>
+      <div id="carouselExampleFade" className="carousel slide carousel-fade"
   data-bs-ride="true"
 
 >

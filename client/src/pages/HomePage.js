@@ -9,6 +9,7 @@ import "../styles/Homepage.css";
 import { AiOutlineReload } from "react-icons/ai"
 import LatestProduct from "./LatestProduct";
 import ShowCategories from "./ShowCategories";
+import Expolre from "./Expolre";
 
 
 const HomePage = () => {
@@ -232,6 +233,7 @@ const HomePage = () => {
        </div>
        <LatestProduct/>
        <ShowCategories/>
+       <Expolre/>
     </Layout>
   )
 }
