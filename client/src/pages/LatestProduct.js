@@ -27,7 +27,7 @@ const LatestProduct = () => {
   }, []);
   return (
     <div>
-         <h3 className="text-success p-2">""Latest Product""</h3>
+         <h3 className="show p-2">""Latest Product""</h3>
     <div className="d-flex flex-wrap home-page">
     {products?.splice(0,4).map((p) => (
              
@@ -40,7 +40,7 @@ const LatestProduct = () => {
                />
                <div className="card-body">
                  <div className="card-name-price"><h5 className="card-title">Name: {p.name}</h5>
-                 <p className="card-text">Price: {p.price}Taka</p>
+                 <p className="card-title card-price">Price: {p.price}Taka</p>
                  </div>
                  
                  {/* <p className="card-text">Description: {p.description}</p>

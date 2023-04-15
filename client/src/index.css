@@ -105,6 +105,21 @@
   background-color: #434343;
   color: green;
 }
+.catt-btn {
+  padding: 38px 0px;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+.catt-btn:hover {
+  background-color: green;
+  color: #434343;
+}
+
+.show  {
+  color: green;
+  font-family: 'Playfair Display', serif;
+  
+}
 /* ================
 ====dashboard
 =================== */

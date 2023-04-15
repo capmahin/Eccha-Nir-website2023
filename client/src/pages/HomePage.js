@@ -8,6 +8,8 @@ import { useNavigate } from "react-router-dom";
 import "../styles/Homepage.css";
 import { AiOutlineReload } from "react-icons/ai"
 import LatestProduct from "./LatestProduct";
+import ShowCategories from "./ShowCategories";
+
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -190,7 +192,7 @@ const HomePage = () => {
                   />
                   <div className="card-body">
                     <div className="card-name-price"><h5 className="card-title">Name: {p.name}</h5>
-                    <p className="card-text">Price: {p.price}Taka</p>
+                    <p className="card-title card-price">Price: {p.price}Taka</p>
                     </div>
                     
                     {/* <p className="card-text">Description: {p.description}</p>
@@ -229,6 +231,7 @@ const HomePage = () => {
         </div>
        </div>
        <LatestProduct/>
+       <ShowCategories/>
     </Layout>
   )
 }
