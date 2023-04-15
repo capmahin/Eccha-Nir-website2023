@@ -27,7 +27,7 @@ const LatestProduct = () => {
   }, []);
   return (
     <div>
-         <h3 className="text-success p-2">Latest Product</h3>
+         <h3 className="text-success p-2">""Latest Product""</h3>
     <div className="d-flex flex-wrap home-page">
     {products?.splice(0,4).map((p) => (
              
