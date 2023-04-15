@@ -3,8 +3,8 @@
 
 /* login */
 .login-back{
-  background-color: green;
-    background-image: linear-gradient(0deg, greenyellow 0%, green 100%);
+  background-color: #1F5F5B;
+    background-image: linear-gradient(0deg, greenyellow 0%, #1F5F5B 100%);
 }
 .form-container {
     
@@ -13,8 +13,8 @@
     justify-content: center;
     min-height: 80vh;
     flex-direction: column;
-    background-color: green;
-    background-image: linear-gradient(0deg, greenyellow 0%, green 100%);
+    background-color: #1F5F5B;
+    background-image: linear-gradient(0deg, greenyellow 0%, #1F5F5B 100%);
   }
   
   .form-container form {
@@ -40,14 +40,14 @@
   }
   .form-container form input:hover {
     border: none;
-    border-bottom: 1px solid green;
+    border-bottom: 1px solid #1F5F5B;
     border-radius: 0;
   }
   
   .form-container form button {
     border: 1px solid black;
     border-radius: 7px;
-    background-color: green;
+    background-color: #1F5F5B;
     color: white;
     width: 250px;
     font-family: 'Great Vibes', cursive ;
@@ -59,18 +59,18 @@
     background: green; /* fallback for old browsers */
     background: -webkit-linear-gradient(
       to right,
-      green,
+      #1F5F5B,
       yellowgreen
     ); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(
       to right,
       yellowgreen,
-      green
+      #1F5F5B
     ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
   
   .forgot-btn {
-    background-color: green !important;
+    background-color: #1F5F5B !important;
     border: 0 !important;
   }
   

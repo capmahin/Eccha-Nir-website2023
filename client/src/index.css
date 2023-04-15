@@ -15,10 +15,10 @@
   font-family: 'Poppins', sans-serif;
   font-size:20px;
   line-height: 26px;
-  box-shadow: 0 8px 6px -6px green;
-  background-color: green;
-  --webkit-box-shadow: 0 8px 6px -6px green;
-  border-bottom:  solid green!important;
+  box-shadow: 0 8px 6px -6px #1F5F5B;
+  background-color: #1F5F5B;
+  --webkit-box-shadow: 0 8px 6px -6px #1F5F5B;
+  border-bottom:  solid #1F5F5B!important;
   
 }
 .nav-link {
@@ -31,18 +31,18 @@
 
 .navbar-brand {
   font-weight: 700;
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Poppins', sans-serif;
   letter-spacing: 3px;
 }
 
 .dropdown-menu{
-  background-color: green;
+  background-color: #1F5F5B;
 }
 .dropdown-menu :hover{
-  background-color: greenyellow;
+  background-color: #1F5F5B;
 }
 .dropdown-menu :active{
-  background-color: greenyellow;
+  background-color: #1F5F5B;
 }
 
 
@@ -103,7 +103,7 @@
 }
 .cat-btn:hover {
   background-color: #434343;
-  color: green;
+  color: #1F5F5B;
 }
 .catt-btn {
   padding: 38px 0px;
@@ -111,12 +111,12 @@
   text-transform: uppercase;
 }
 .catt-btn:hover {
-  background-color: green;
+  background-color: #1F5F5B;
   color: #434343;
 }
 
 .show  {
-  color: green;
+  color: #1F5F5B;
   font-family: 'Playfair Display', serif;
   
 }

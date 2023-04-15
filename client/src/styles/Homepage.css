@@ -3,7 +3,7 @@
   }
   
   .home-page h1 {
-    color: green;
+    color: #1F5F5B;
     font-family: 'Playfair Display', serif;
     
   }
@@ -24,7 +24,7 @@
   }
   
   .home-page .card-price {
-    color: green;
+    color: #1F5F5B;
     font-weight: bold;
   }
   .home-page button {
@@ -77,7 +77,7 @@
   }
   
   .loadmore {
-    color: green;
+    color: #1F5F5B;
     font-weight: bold;
     font-size: 20px !important;
   }
