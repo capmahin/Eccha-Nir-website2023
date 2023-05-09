@@ -190,6 +190,7 @@ const HomePage = () => {
                     className="card-img-top"
                     height={"150px"}
                     alt={p.name}
+                    onClick={() => navigate(`/product/${p.slug}`)}
                   />
                   <div className="card-body">
                     <div className="card-name-price"><h5 className="card-title">Name: {p.name}</h5>
@@ -200,7 +201,7 @@ const HomePage = () => {
                     <p className="card-text">Quantity: {p.quantity}</p> */}
                     
                     <div>
-                   <button className="btn btn-success ms-1" onClick={() => navigate(`/product/${p.slug}`)}>More Details</button>
+                   <button className="btn btn-success ms-1" >More Details</button>
                    
                   </div>
 
