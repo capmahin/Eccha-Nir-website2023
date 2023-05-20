@@ -198,13 +198,9 @@ const HomePage = () => {
                   <div className="card-body">
                     <div className="card-name-price"><h5 className="card-title">Name: {p.name}</h5>
                     <p className="card-title card-price">Price: {p.price}Taka</p>
+                  
                     </div>
-                    
-                    {/* <p className="card-text">Description: {p.description}</p>
-                    <p className="card-text">Quantity: {p.quantity}</p> */}
-                    
-                    <div>
-                   <button className="btn btn-success ms-1" >Buy Now</button>
+                    <button className="btn btn-success ms-1" >Buy Now</button>
                    <button className="btn btn-secondary ms-1"
                     onClick={() => {
                       setCart([...cart, p]);
@@ -214,8 +210,11 @@ const HomePage = () => {
                       );
                       toast.success("Item Added to cart");
                     }} >Add to cart</button>
-                   
-                  </div>
+                    
+                    {/* <p className="card-text">Description: {p.description}</p>
+                    <p className="card-text">Quantity: {p.quantity}</p> */}
+                    
+                    
 
                   </div>
                 </div>
