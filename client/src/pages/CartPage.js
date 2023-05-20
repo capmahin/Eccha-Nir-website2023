@@ -127,4 +127,4 @@ const CartPage = () => {
   );
 };
 
-export default CartPage;import React from "react";
+export default CartPage;
