@@ -10,10 +10,13 @@ import { AiOutlineReload } from "react-icons/ai"
 import LatestProduct from "./LatestProduct";
 import ShowCategories from "./ShowCategories";
 import Expolre from "./Expolre";
+import { useCart } from "../context/cart";
+import toast from "react-hot-toast";
 
 
 const HomePage = () => {
   const navigate = useNavigate();
+  const [cart, setCart] = useCart();
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [checked, setChecked] = useState([]);
@@ -202,7 +205,15 @@ const HomePage = () => {
                     
                     <div>
                    <button className="btn btn-success ms-1" >Buy Now</button>
-                   <button className="btn btn-success ms-1" >Add to cart</button>
+                   <button className="btn btn-secondary ms-1"
+                    onClick={() => {
+                      setCart([...cart, p]);
+                      localStorage.setItem(
+                        "cart",
+                        JSON.stringify([...cart, p])
+                      );
+                      toast.success("Item Added to cart");
+                    }} >Add to cart</button>
                    
                   </div>
 
