@@ -201,7 +201,8 @@ const HomePage = () => {
                     <p className="card-text">Quantity: {p.quantity}</p> */}
                     
                     <div>
-                   <button className="btn btn-success ms-1" >More Details</button>
+                   <button className="btn btn-success ms-1" >Buy Now</button>
+                   <button className="btn btn-success ms-1" >Add to cart</button>
                    
                   </div>
 
