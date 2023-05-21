@@ -1,19 +1,43 @@
-import React from 'react';
-import Banner1 from '../../assists/Image/Banner1.png'
-import Banner2 from '../../assists/Image/Banner2.png'
-import Banner3 from '../../assists/Image/Banner3.png'
-import Banner4 from '../../assists/Image/Banner4.png'
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import toast from "react-hot-toast";
 
 const Banner = () => {
+  const [products, setProducts] = useState([]);
+  const getAllProducts = async () => {
+    try {
+        const { data } = await axios.get("/api/v1/banner/get-banner");
+      setProducts(data.products);
+    } catch (error) {
+      console.log(error);
+      toast.error("Something Went Wrong");
+    }
+  };
+
+  //lifecycle method
+  useEffect(() => {
+    getAllProducts();
+  }, []);
   return (
     <div>
+     
       <div id="carouselExampleFade" className="carousel slide carousel-fade"
   data-bs-ride="true"
 
 >
   <div className="carousel-inner">
+  {products?.map((p) => (
     <div className="carousel-item active">
-      <img src={Banner1}  className="d-block w-100" height={"300px"} alt="..." />
+    
+         
+        <img src={`/api/v1/banner/banner-photo/${p._id}`}  className="d-block w-100" height={"400px"} alt="..." />
+        
+             </div>
+             ))}
+           
+        
+
+      {/* <img src={Banner1}  className="d-block w-100" height={"300px"} alt="..." />
     </div>
     <div className="carousel-item">
       <img src={Banner2} className="d-block w-100" height={"300px"} alt="..." />
@@ -22,8 +46,8 @@ const Banner = () => {
       <img src={Banner3} className="d-block w-100" height={"300px"} alt="..." />
     </div>
     <div className="carousel-item">
-      <img src={Banner4} className="d-block w-100" height={"300px"} alt="..." />
-    </div>
+      <img src={Banner4} className="d-block w-100" height={"300px"} alt="..." /> */}
+    
   </div>
   <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
     <span className="carousel-control-prev-icon" aria-hidden="true" />
@@ -34,6 +58,7 @@ const Banner = () => {
     <span className="visually-hidden">Next</span>
   </button>
 </div>
+
 </div>
   )
 }
