@@ -1,15 +1,18 @@
 import slugify from "slugify";
 import bannerModel from "../models/bannerModel.js";
+import categoryModel from '../models/categoryModel.js'
 import fs from 'fs';
 
 export const createBannerController = async(req,res)=>{
     try {
-        const {name,slug} = req.fields;
+        const {name,slug,category,} = req.fields;
         const {photo} = req.files;
         //validation
         switch(true){
             case !name:
                 return res.status(500).send({error:'Name required'})
+                case !category:
+                return res.status(500).send({error:'Category required'})
                 case photo && photo.size > 5000000:
                     return res
                       .status(500)
@@ -40,7 +43,7 @@ export const createBannerController = async(req,res)=>{
 
 export const getBannerController = async(req,res)=>{
     try {
-        const products = await bannerModel.find({}).select("-photo").limit(20).sort({createdAt:-1});
+        const products = await bannerModel.find({}).populate("category").select("-photo").limit(20).sort({createdAt:-1});
         res.status(200).send({
             success:true,
             countTotal:products.length,
@@ -63,7 +66,7 @@ export const getBannerController = async(req,res)=>{
 
 export const getSingleBannerController = async(req,res)=>{
     try {
-        const product = await bannerModel.findOne({slug:req.params.slug}).select("-photo");
+        const product = await bannerModel.findOne({slug:req.params.slug}).select("-photo").populate("category");
         res.status(200).send({
             success:true,
             message:'Single product fetched',
@@ -123,14 +126,15 @@ export const deleteBannerController = async(req,res)=>{
 
 export const updateBannerController = async(req,res)=>{
     try {
-        const {name,slug} = req.fields;
+        const {name,slug,category,} = req.fields;
         const {photo} = req.files;
         //validation
         switch(true){
             case !name:
                 return res.status(500).send({error:'Name required'})
             
-           
+                case !category:
+                    return res.status(500).send({error:'Category required'})
                 case photo && photo.size > 5000000:
                     return res
                       .status(500)

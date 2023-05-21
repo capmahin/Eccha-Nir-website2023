@@ -10,7 +10,11 @@ const bannerSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    
+    category:{
+        type:mongoose.ObjectId,
+        ref:'Category',
+        required:true
+    },
     photo:{
         data:Buffer,
         contentType:String
