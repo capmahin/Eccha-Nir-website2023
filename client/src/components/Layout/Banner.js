@@ -37,16 +37,7 @@ const Banner = () => {
            
         
 
-      {/* <img src={Banner1}  className="d-block w-100" height={"300px"} alt="..." />
-    </div>
-    <div className="carousel-item">
-      <img src={Banner2} className="d-block w-100" height={"300px"} alt="..." />
-    </div>
-    <div className="carousel-item">
-      <img src={Banner3} className="d-block w-100" height={"300px"} alt="..." />
-    </div>
-    <div className="carousel-item">
-      <img src={Banner4} className="d-block w-100" height={"300px"} alt="..." /> */}
+      
     
   </div>
   <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
