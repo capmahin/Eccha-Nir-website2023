@@ -200,6 +200,7 @@ const HomePage = () => {
                     <p className="card-title card-price">Price: {p.price}Taka</p>
                   
                     </div>
+                    <div className="d-flex">
                     <button className="btn btn-success ms-1" >Buy Now</button>
                    <button className="btn btn-secondary ms-1"
                     onClick={() => {
@@ -210,6 +211,7 @@ const HomePage = () => {
                       );
                       toast.success("Item Added to cart");
                     }} >Add to cart</button>
+                    </div>
                     
                     {/* <p className="card-text">Description: {p.description}</p>
                     <p className="card-text">Quantity: {p.quantity}</p> */}
