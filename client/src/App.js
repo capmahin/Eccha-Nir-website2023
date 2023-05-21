@@ -19,7 +19,9 @@ import Users from "./pages/Admin/Users";
 import Orders from "./pages/user/Orders";
 import Profile from "./pages/user/Profile";
 import Products from "./pages/Admin/Products";
+import Banners from "./pages/Admin/Banners";
 import UpdateProducts from "./pages/Admin/UpdateProducts";
+import UpdateBanners from "./pages/Admin/UpdateBanners";
 import Search from "./pages/Search";
 import ProductDetails from "./pages/ProductDetails";
 import Categories from "./pages/Categories";
@@ -48,7 +50,9 @@ function App() {
           <Route path="admin/create-product" element={<CreateProduct/>}/>
           <Route path="admin/create-banner" element={<CreateBanner/>}/>
           <Route path="admin/product/:slug" element={<UpdateProducts/>}/>
+          <Route path="admin/banner/:slug" element={<UpdateBanners/>}/>
           <Route path="admin/products" element={<Products />} />
+          <Route path="admin/banners" element={<Banners />} />
           <Route path="admin/users" element={<Users/>}/>
         </Route>
         <Route path="/register"  element={<Register/>}/>
