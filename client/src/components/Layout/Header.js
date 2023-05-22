@@ -93,18 +93,22 @@ const Header = () => {
         )
        }
        
+       
         <li className="nav-item">
                 <NavLink to="/about" className="nav-link">
                   About
                 </NavLink>
               </li>
+        
+              
               <li className="nav-item">
                 <Badge count={cart?.length} showZero>
                   <NavLink to="/cart" className="nav-link">
-                    Cart
+                  🛒
                   </NavLink>
                 </Badge>
               </li>
+              
         
       </ul>
       
