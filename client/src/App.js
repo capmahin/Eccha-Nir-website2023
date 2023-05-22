@@ -54,6 +54,7 @@ function App() {
           <Route path="admin/create-banner" element={<CreateBanner/>}/>
           <Route path="admin/product/:slug" element={<UpdateProducts/>}/>
           <Route path="admin/banner/:slug" element={<UpdateBanners/>}/>
+          <Route path="admin/CreateOrder" element={<CreateOrder />} />
           <Route path="admin/products" element={<Products />} />
           <Route path="admin/orders" element={<Orders />} />
           <Route path="admin/banners" element={<Banners />} />

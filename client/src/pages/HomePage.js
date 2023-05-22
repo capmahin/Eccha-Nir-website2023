@@ -124,6 +124,10 @@ const HomePage = () => {
     }
   };
 
+  //order
+
+ 
+
   // filter by cat
   const handleFilter = (value, id) => {
     let all = [...checked];
@@ -209,17 +213,8 @@ const HomePage = () => {
                   
                     </div>
                     <div className="d-flex">
-                    <button className="btn btn-success ms-1"  onClick={()=> {
-                              setVisible(true);
-                              
-                            }} >Buy Now</button>
-                    <Modal title="Buy Now"onCancel={() => setVisible(false)}
-              footer={null}
-              visible={visible}
-              >
-        <h4>Bkash: 01303-347695</h4>
-        
-      </Modal>
+                    <button className="btn btn-success ms-1"  onClick={()=>navigate("/CreateOrder")} >Buy Now</button>
+                    
                    <button className="btn btn-secondary ms-1"
                     onClick={() => {
                       setCart([...cart, p]);

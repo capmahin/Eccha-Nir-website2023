@@ -1,5 +1,5 @@
 import slugify from "slugify";
-import orderModel from "../models/orderModel";
+import orderModel from "../models/orderModel.js";
 import categoryModel from '../models/categoryModel.js'
 import fs from 'fs';
 

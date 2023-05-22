@@ -1,6 +1,4 @@
 import React,{useState,useEffect} from 'react'
-import AdminMenu from "../../components/Layout/AdminMenu"
-import Layout from "../../components/Layout/Layout";
 import axios from "axios";
 import toast from 'react-hot-toast'
 import { Select } from "antd";
@@ -71,12 +69,10 @@ const CreateOrder = () => {
   };
 
   return (
-    <Layout title={'Dashboard-Create Orders'}>
+    
       <div className="container-fluid m-3 p-3">
     <div className="row">
-      <div className="col-md-3">
-        <AdminMenu/>
-      </div>
+      
       <div className="col-md-9">
         <h1>Orders</h1>
         <div className="m-1 w-75">
@@ -217,7 +213,7 @@ const CreateOrder = () => {
       </div>
     </div>
     </div>
-  </Layout>
+  
   )
 }
 
