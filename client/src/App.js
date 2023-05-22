@@ -16,9 +16,10 @@ import CreateCategory from "./pages/Admin/CreateCategory";
 import CreateProduct from "./pages/Admin/CreateProduct";
 import CreateBanner from "./pages/Admin/CreateBanner";
 import Users from "./pages/Admin/Users";
-import Orders from "./pages/user/Orders";
+// import Orders from "./pages/user/Orders";
 import Profile from "./pages/user/Profile";
 import Products from "./pages/Admin/Products";
+import Orders from "./pages/Admin/Orders";
 import Banners from "./pages/Admin/Banners";
 import UpdateProducts from "./pages/Admin/UpdateProducts";
 import UpdateBanners from "./pages/Admin/UpdateBanners";
@@ -27,6 +28,7 @@ import ProductDetails from "./pages/ProductDetails";
 import Categories from "./pages/Categories";
 import CategoryProduct from "./pages/CategoryProduct";
 import CartPage from "./pages/CartPage";
+import CreateOrder from "./pages/CreateOrder";
 
 
 function App() {
@@ -36,11 +38,12 @@ function App() {
         <Route path="/"  element={<HomePage/>}/>
         <Route path="/product/:slug" element={<ProductDetails />} />
         <Route path="/cart" element={<CartPage />} />
+        <Route path="/CreateOrder" element={<CreateOrder />} />
         <Route path="/categories" element={<Categories />} />
         <Route path="/category/:slug" element={<CategoryProduct />} />
         <Route path="/search"  element={<Search/>}/>
         <Route path="/dashboard" element={<PrivateRoute/>}>
-        <Route path="user/orders"  element={<Orders/>}/>
+        {/* <Route path="user/orders"  element={<Orders/>}/> */}
         <Route path="user/profile"  element={<Profile/>}/>
         <Route path="user"  element={<Dashboard/>}/>
         </Route>
@@ -52,6 +55,7 @@ function App() {
           <Route path="admin/product/:slug" element={<UpdateProducts/>}/>
           <Route path="admin/banner/:slug" element={<UpdateBanners/>}/>
           <Route path="admin/products" element={<Products />} />
+          <Route path="admin/orders" element={<Orders />} />
           <Route path="admin/banners" element={<Banners />} />
           <Route path="admin/users" element={<Users/>}/>
         </Route>
