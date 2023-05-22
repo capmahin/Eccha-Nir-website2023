@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useState} from "react";
 import Layout from "./../components/Layout/Layout";
 import { useCart } from "../context/cart";
 import { useAuth } from "../context/auth";
 import { useNavigate } from "react-router-dom";
+import {  Modal } from "antd";
 const CartPage = () => {
   const [auth, setAuth] = useAuth();
   const [cart, setCart] = useCart();
   const navigate = useNavigate();
+
+   // Buy Now
+  const [visible, setVisible] = useState(false);
 
   //total price
   const totalPrice = () => {
@@ -66,8 +70,19 @@ const CartPage = () => {
                   <p>{p.name}</p>
                   <p>{p.description.substring(0, 30)}</p>
                   <p>Price : {p.price}</p>
+                  <button className="btn btn-success ms-1"  onClick={()=> {
+                              setVisible(true);
+                              
+                            }} >Buy Now</button>
+                    <Modal title="Buy Now"onCancel={() => setVisible(false)}
+              footer={null}
+              visible={visible}
+              >
+        <h4>Bkash: 01303-347695</h4>
+        
+      </Modal>
                   <button
-                    className="btn btn-danger"
+                    className="btn btn-danger  ms-1"
                     onClick={() => removeCartItem(p._id)}
                   >
                     Remove
@@ -81,7 +96,7 @@ const CartPage = () => {
             <p>Total  | Payment</p>
             <hr />
             <h4>Total : {totalPrice()} Taka </h4>
-            <h4>Bkash</h4>
+            <h4>Bkash : 01303-347695</h4>
             {/* {auth?.user?.address ? (
               <>
                 <div className="mb-3">

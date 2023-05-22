@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect} from "react";
 import Banner from "../components/Layout/Banner";
 import Layout from "../components/Layout/Layout"
 import { Prices } from "../components/Prices"; 
 import axios from "axios";
-import { Checkbox, Radio } from "antd";
+import { Checkbox, Radio, Modal } from "antd";
 import { useNavigate } from "react-router-dom";
 import "../styles/Homepage.css";
 import { AiOutlineReload } from "react-icons/ai"
@@ -14,8 +14,10 @@ import { useCart } from "../context/cart";
 import toast from "react-hot-toast";
 
 
+
 const HomePage = () => {
   const navigate = useNavigate();
+ 
   const [cart, setCart] = useCart();
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
@@ -24,6 +26,12 @@ const HomePage = () => {
   const [total, setTotal] = useState(0);
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
+
+  // Buy Now
+  const [visible, setVisible] = useState(false);
+
+  
+  
 
   //get all cat
   const getAllCategory = async () => {
@@ -201,7 +209,17 @@ const HomePage = () => {
                   
                     </div>
                     <div className="d-flex">
-                    <button className="btn btn-success ms-1" >Buy Now</button>
+                    <button className="btn btn-success ms-1"  onClick={()=> {
+                              setVisible(true);
+                              
+                            }} >Buy Now</button>
+                    <Modal title="Buy Now"onCancel={() => setVisible(false)}
+              footer={null}
+              visible={visible}
+              >
+        <h4>Bkash: 01303-347695</h4>
+        
+      </Modal>
                    <button className="btn btn-secondary ms-1"
                     onClick={() => {
                       setCart([...cart, p]);
