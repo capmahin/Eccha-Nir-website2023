@@ -29,6 +29,7 @@ import Categories from "./pages/Categories";
 import CategoryProduct from "./pages/CategoryProduct";
 import CartPage from "./pages/CartPage";
 import CreateOrder from "./pages/CreateOrder";
+import UpdateOrders from "./pages/Admin/UpdateOrders";
 
 
 function App() {
@@ -54,7 +55,8 @@ function App() {
           <Route path="admin/create-banner" element={<CreateBanner/>}/>
           <Route path="admin/product/:slug" element={<UpdateProducts/>}/>
           <Route path="admin/banner/:slug" element={<UpdateBanners/>}/>
-          <Route path="admin/CreateOrder" element={<CreateOrder />} />
+          <Route path="admin/order/:slug" element={<UpdateOrders/>}/>
+         
           <Route path="admin/products" element={<Products />} />
           <Route path="admin/orders" element={<Orders />} />
           <Route path="admin/banners" element={<Banners />} />
