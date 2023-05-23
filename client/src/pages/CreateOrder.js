@@ -73,7 +73,7 @@ const CreateOrder = () => {
       <div className="container-fluid m-3 p-3">
     <div className="row">
       
-      <div className="col-md-9">
+      <div>
         <h1>Orders</h1>
         <div className="m-1 w-75">
            <Select

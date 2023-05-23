@@ -7,8 +7,8 @@ const UserMenu = () => {
     <div className="text-center ">
     <div className="list-group ">
   
-  {/* <NavLink to="/dashboard/user/profile" className="list-group-item list-group-item-action bg-success">Profile</NavLink> */}
-  {/* <NavLink to="/dashboard/user/orders" className="list-group-item list-group-item-action bg-success">Orders</NavLink> */}
+  <NavLink to="/dashboard/user/orderShow" className="list-group-item list-group-item-action bg-success">OrderShow</NavLink> 
+ 
   
   
 </div>

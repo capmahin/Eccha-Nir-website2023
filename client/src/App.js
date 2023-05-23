@@ -30,6 +30,7 @@ import CategoryProduct from "./pages/CategoryProduct";
 import CartPage from "./pages/CartPage";
 import CreateOrder from "./pages/CreateOrder";
 import UpdateOrders from "./pages/Admin/UpdateOrders";
+import OrdersShow from "./pages/user/OrdersShow";
 
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
         <Route path="/dashboard" element={<PrivateRoute/>}>
         {/* <Route path="user/orders"  element={<Orders/>}/> */}
         <Route path="user/profile"  element={<Profile/>}/>
+        <Route path="user/orderShow"  element={<OrdersShow/>}/>
         <Route path="user"  element={<Dashboard/>}/>
         </Route>
         <Route path="/dashboard" element={<AdminRoute/>}>

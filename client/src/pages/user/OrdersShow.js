@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from "../../components/Layout/Layout"
 import UserMenu from "../../components/Layout/UserMenu"
 
-const Orders = () => {
+const OrdersShow = () => {
   return (
     <Layout title={'Dashboard-Orders'}>
         <div className="container-fluid p-3 m-3">
@@ -19,4 +19,4 @@ const Orders = () => {
   )
 }
 
-export default Orders
+export default OrdersShow
