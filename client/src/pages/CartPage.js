@@ -70,17 +70,7 @@ const CartPage = () => {
                   <p>{p.name}</p>
                   <p>{p.description.substring(0, 30)}</p>
                   <p>Price : {p.price}</p>
-                  <button className="btn btn-success ms-1"  onClick={()=> {
-                              setVisible(true);
-                              
-                            }} >Buy Now</button>
-                    <Modal title="Buy Now"onCancel={() => setVisible(false)}
-              footer={null}
-              visible={visible}
-              >
-        <h4>Bkash: 01303-347695</h4>
-        
-      </Modal>
+                  <button className="btn btn-success ms-1"  onClick={()=>navigate("/CreateOrder")} >Buy Now</button>
                   <button
                     className="btn btn-danger  ms-1"
                     onClick={() => removeCartItem(p._id)}

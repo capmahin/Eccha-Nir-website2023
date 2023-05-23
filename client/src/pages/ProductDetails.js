@@ -3,7 +3,11 @@ import Layout from "./../components/Layout/Layout";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 import "../styles/ProductDetailsStyles.css";
+import { useCart } from "../context/cart";
+import toast from "react-hot-toast";
+
 const ProductDetails = () => {
+  const [cart, setCart] = useCart();
   const params = useParams();
   const navigate = useNavigate();
   const [product, setProduct] = useState({});
@@ -83,12 +87,19 @@ const ProductDetails = () => {
                   {p.description.substring(0, 60)}...
                 </p>
                 <div className="card-name-price">
-                  <button
-                    className="btn btn-success ms-1"
-                    onClick={() => navigate(`/product/${p.slug}`)}
-                  >
-                    More Details
-                  </button>
+                <div className="d-flex">
+                    <button className="btn btn-success ms-1"  onClick={()=>navigate("/CreateOrder")} >Buy Now</button>
+                    
+                   <button className="btn btn-secondary ms-1"
+                    onClick={() => {
+                      setCart([...cart, p]);
+                      localStorage.setItem(
+                        "cart",
+                        JSON.stringify([...cart, p])
+                      );
+                      toast.success("Item Added to cart");
+                    }} >Add to cart</button>
+                    </div>
                   {/* <button
                   className="btn btn-dark ms-1"
                   onClick={() => {
