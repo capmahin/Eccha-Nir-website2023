@@ -3,6 +3,7 @@ import axios from "axios";
 import toast from 'react-hot-toast'
 import { Select } from "antd";
 import { useNavigate } from "react-router-dom";
+import Layout from "../components/Layout/Layout";
 const { Option } = Select;
 
 const CreateOrder = () => {
@@ -18,6 +19,9 @@ const CreateOrder = () => {
   const [category, setCategory] = useState("");
   const [quantity, setQuantity] = useState("");
   const [shipping, setShipping] = useState("");
+  const [serial, setSerial] = useState("");
+  const [pobox, setPobox] = useState("");
+  
   // const [id, setId] = useState("");
   // const [photo, setPhoto] = useState("");
   // const [photo, setPhoto] = useState("");
@@ -52,6 +56,8 @@ const CreateOrder = () => {
       productData.append("currieraddress", currieraddress);
       productData.append("size", size);
       productData.append("quantity", quantity);
+      productData.append("serial", serial);
+      productData.append("pobox", pobox);
       // productData.append("photo", photo);
       productData.append("category", category);
       const { data } = axios.post(
@@ -69,9 +75,9 @@ const CreateOrder = () => {
       toast.error("something went wrong");
     }
   };
-
+  
   return (
-    
+    <Layout>
       <div className="container-fluid m-3 p-3">
     <div className="row">
       
@@ -177,6 +183,24 @@ const CreateOrder = () => {
                 />
               </div>
               <div className="mb-3">
+                <input
+                  type="number"
+                  value={serial}
+                  placeholder="Write Order Serial"
+                  className="form-control"
+                  onChange={(e) => setSerial(e.target.value)}
+                />
+              </div>
+              <div className="mb-3">
+                <input
+                  type="number"
+                  value={pobox}
+                  placeholder="write your PO-Box address"
+                  className="form-control"
+                  onChange={(e) => setPobox(e.target.value)}
+                />
+              </div>
+              <div className="mb-3">
                 <textarea
                   type="text"
                   value={address}
@@ -195,13 +219,23 @@ const CreateOrder = () => {
                 />
               </div>
               <div className="mb-3">
-                <input
-                  type="text"
-                  value={size}
-                  placeholder="write a size"
-                  className="form-control"
-                  onChange={(e) => setSize(e.target.value)}
-                />
+              <Select
+                  bordered={false}
+                  placeholder="Select Size "
+                  size="large"
+                  showSearch
+                  className="form-select mb-3"
+                  onChange={(value) => {
+                    setSize(value);
+                  }}
+                >
+                  <Option value="0">M</Option>
+                  <Option value="1">L</Option>
+                  <Option value="2">XL</Option>
+                  <Option value="3">XXl</Option>
+                </Select>
+                
+
               </div>
               <div className="mb-3">
                 <input
@@ -236,6 +270,7 @@ const CreateOrder = () => {
       </div>
     </div>
     </div>
+    </Layout>
   
   )
 }
