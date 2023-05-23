@@ -18,6 +18,8 @@ const CreateOrder = () => {
   const [category, setCategory] = useState("");
   const [quantity, setQuantity] = useState("");
   const [shipping, setShipping] = useState("");
+  const [id, setId] = useState("");
+  const [photo, setPhoto] = useState("");
   // const [photo, setPhoto] = useState("");
 
   //get all category
@@ -109,6 +111,27 @@ const CreateOrder = () => {
                   <div className="text-center">
                     <img
                       src={URL.createObjectURL(photo)}
+                      alt="product_photo"
+                      height={"200px"}
+                      className="img img-responsive"
+                    />
+                  </div>
+                )}
+              </div> */}
+              {/* <div className="mb-3">
+                {photo ? (
+                  <div className="text-center">
+                    <img
+                      src={URL.createObjectURL(photo)}
+                      alt="product_photo"
+                      height={"200px"}
+                      className="img img-responsive"
+                    />
+                  </div>
+                ) : (
+                  <div className="text-center">
+                    <img
+                      src={`/api/v1/product/product-photo/${id}`}
                       alt="product_photo"
                       height={"200px"}
                       className="img img-responsive"
