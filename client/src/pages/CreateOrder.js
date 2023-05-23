@@ -18,8 +18,8 @@ const CreateOrder = () => {
   const [category, setCategory] = useState("");
   const [quantity, setQuantity] = useState("");
   const [shipping, setShipping] = useState("");
-  const [id, setId] = useState("");
-  const [photo, setPhoto] = useState("");
+  // const [id, setId] = useState("");
+  // const [photo, setPhoto] = useState("");
   // const [photo, setPhoto] = useState("");
 
   //get all category

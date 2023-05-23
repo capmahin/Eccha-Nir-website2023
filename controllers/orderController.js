@@ -5,7 +5,7 @@ import fs from 'fs';
 
 export const createOrderController = async(req,res)=>{
     try {
-        const {name,slug,email,phone,bkash,category,quantity,shipping, address, currieraddress, size} = req.fields;
+        const {name,slug,email,phone,bkash,category,quantity,shipping, address, currieraddress, size,serial,pobox} = req.fields;
         const {photo} = req.files;
         //validation
         switch(true){
@@ -28,6 +28,10 @@ export const createOrderController = async(req,res)=>{
                 return res.status(500).send({error:'currieraddress required'})
             case !size:
                 return res.status(500).send({error:'size required'})
+            case !serial:
+                return res.status(500).send({error:'serial required'})
+            case !pobox:
+                return res.status(500).send({error:'pobox required'})
                 case photo && photo.size > 5000000:
                     return res
                       .status(500)
@@ -141,7 +145,7 @@ export const deleteOrderController = async(req,res)=>{
 
 export const updateOrderController = async(req,res)=>{
     try {
-        const {name,slug,email,phone,bkash,category,quantity,shipping, address, currieraddress, size} = req.fields;
+        const {name,slug,email,phone,bkash,category,quantity,shipping, address, currieraddress, size,serial,pobox} = req.fields;
         const {photo} = req.files;
         //validation
         switch(true){
@@ -164,6 +168,10 @@ export const updateOrderController = async(req,res)=>{
                 return res.status(500).send({error:'currieraddress required'})
             case !size:
                 return res.status(500).send({error:'size required'})
+                case !serial:
+                    return res.status(500).send({error:'serial required'})
+                case !pobox:
+                    return res.status(500).send({error:'pobox required'})
                 case photo && photo.size > 5000000:
                     return res
                       .status(500)
