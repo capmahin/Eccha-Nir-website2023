@@ -4,9 +4,10 @@ import Layout from "../../components/Layout/Layout";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
+import { useOrder } from "../../context/order";
 const Orders = () => {
     const [products, setProducts] = useState([]);
-
+    const [order, setOrder] = useOrder();
   //getall products
   const getAllProducts = async () => {
     try {
