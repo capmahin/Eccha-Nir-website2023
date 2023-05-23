@@ -28,7 +28,7 @@ const UpdateOrders = () => {
   const getSingleProduct = async () => {
     try {
       const { data } = await axios.get(
-        `/api/v1/product/get-product/${params.slug}`
+        `/api/v1/order/get-order/${params.slug}`
       );
       setName(data.product.name);
       setId(data.product._id);
@@ -106,7 +106,7 @@ const UpdateOrders = () => {
         `/api/v1/order/delete-order/${id}`
       );
       toast.success("Order Deleted Successfully");
-      navigate("/dashboard/admin/products");
+      navigate("/dashboard/admin/orders");
     } catch (error) {
       console.log(error);
       toast.error("Something went wrong");
@@ -120,7 +120,7 @@ const UpdateOrders = () => {
             <AdminMenu />
           </div>
           <div className="col-md-9">
-            <h1>Update Product</h1>
+            <h1>Check Order</h1>
             <div className="m-1 w-75">
               <Select
                 bordered={false}
@@ -148,6 +148,7 @@ const UpdateOrders = () => {
                   placeholder="write a name"
                   className="form-control"
                   onChange={(e) => setName(e.target.value)}
+                  disabled
                 />
               </div>
               <div className="mb-3">
@@ -157,6 +158,7 @@ const UpdateOrders = () => {
                   placeholder="write a email"
                   className="form-control"
                   onChange={(e) => setEmail(e.target.value)}
+                  disabled
                 />
               </div>
 
@@ -167,6 +169,7 @@ const UpdateOrders = () => {
                   placeholder="write a phone"
                   className="form-control"
                   onChange={(e) => setPhone(e.target.value)}
+                  disabled
                 />
               </div>
               <div className="mb-3">
@@ -176,6 +179,7 @@ const UpdateOrders = () => {
                   placeholder="write a bkash"
                   className="form-control"
                   onChange={(e) => setBkash(e.target.value)}
+                  disabled
                 />
               </div>
               <div className="mb-3">
@@ -185,6 +189,7 @@ const UpdateOrders = () => {
                   placeholder="write a address"
                   className="form-control"
                   onChange={(e) => setAddress(e.target.value)}
+                  disabled
                 />
               </div>
               <div className="mb-3">
@@ -194,6 +199,7 @@ const UpdateOrders = () => {
                   placeholder="write a currieraddress"
                   className="form-control"
                   onChange={(e) => setCurrieraddress(e.target.value)}
+                  disabled
                 />
               </div>
               <div className="mb-3">
@@ -203,6 +209,7 @@ const UpdateOrders = () => {
                   placeholder="write a size"
                   className="form-control"
                   onChange={(e) => setSize(e.target.value)}
+                  disabled
                 />
               </div>
               <div className="mb-3">
@@ -212,6 +219,7 @@ const UpdateOrders = () => {
                   placeholder="write a quantity"
                   className="form-control"
                   onChange={(e) => setQuantity(e.target.value)}
+                  disabled
                 />
               </div>
               <div className="mb-3">
@@ -232,7 +240,7 @@ const UpdateOrders = () => {
               </div>
               <div className="mb-3">
                 <button className="btn btn-success" onClick={handleUpdate}>
-                  UPDATE PRODUCT
+                 Order
                 </button>
               </div>
               <div className="mb-3">

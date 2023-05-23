@@ -45,7 +45,10 @@ const OrdersShow = () => {
               <div className="row mb-2 p-3 card flex-row">
                 
                 <div className="col-md-8">
-                  <p>{p.name}</p>
+                  <p>Product Name: {p.name}</p>
+                  <p>Product Serial Number: {p.serial}</p>
+                  <p>Client Address: {p.address}</p>
+                  <p>Client Currier_Address: {p.currieraddress}</p>
                   {/* <p>{p.description.substring(0, 30)}</p> */}
                   {/* <p>Price : {p.price}</p> */}
                  
