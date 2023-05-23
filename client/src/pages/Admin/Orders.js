@@ -58,6 +58,17 @@ const Orders = () => {
                     <p className="card-text">Quantity: {p.quantity}</p>
                     <p className="card-text">Price: {p.price}Taka</p>
                   </div>
+                  <div>
+                  <button className="btn btn-secondary ms-1"
+                    onClick={() => {
+                      setOrder([...order, p]);
+                      localStorage.setItem(
+                        "order",
+                        JSON.stringify([...order, p])
+                      );
+                      toast.success("Item Added to order");
+                    }} >Confirm</button>
+                  </div>
                 </div>
               </Link>
             ))}
