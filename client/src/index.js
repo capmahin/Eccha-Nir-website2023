@@ -8,6 +8,7 @@ import { AuthProvider } from "./context/auth";
 import { SearchProvider } from "./context/search";
 import 'antd/dist/reset.css';
 import { CartProvider } from "./context/cart";
+import { OrderProvider } from "./context/order";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,9 +16,11 @@ root.render(
   <AuthProvider>
     <SearchProvider>
     <CartProvider>
+      <OrderProvider>
     <BrowserRouter>
     <App />
     </BrowserRouter>
+    </OrderProvider>
     </CartProvider>
     </SearchProvider>
   </AuthProvider>
