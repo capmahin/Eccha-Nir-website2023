@@ -86,7 +86,6 @@ const ProductDetails = () => {
                 <p className="card-text ">
                   {p.description.substring(0, 60)}...
                 </p>
-                <div className="card-name-price">
                 <div className="d-flex">
                     <button className="btn btn-success ms-1"  onClick={()=>navigate("/CreateOrder")} >Buy Now</button>
                     
@@ -100,20 +99,6 @@ const ProductDetails = () => {
                       toast.success("Item Added to cart");
                     }} >Add to cart</button>
                     </div>
-                  {/* <button
-                  className="btn btn-dark ms-1"
-                  onClick={() => {
-                    setCart([...cart, p]);
-                    localStorage.setItem(
-                      "cart",
-                      JSON.stringify([...cart, p])
-                    );
-                    toast.success("Item Added to cart");
-                  }}
-                >
-                  ADD TO CART
-                </button> */}
-                </div>
               </div>
             </div>
           ))}
