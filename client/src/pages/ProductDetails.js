@@ -59,8 +59,21 @@ const ProductDetails = () => {
           <h6>Category : {product?.category?.name}</h6>
           <h6>Price : {product.price} taka</h6>
           <h6>Category : {product?.category?.name}</h6>
-          
+          <div className="d-flex">
+                    <button className="btn btn-success ms-1"  onClick={()=>navigate("/CreateOrder")} >Buy Now</button>
+                    
+                   <button className="btn btn-secondary ms-1"
+                    onClick={() => {
+                      setCart([...cart, product]);
+                      localStorage.setItem(
+                        "cart",
+                        JSON.stringify([...cart, product])
+                      );
+                      toast.success("Item Added to cart");
+                    }} >Add to cart</button>
+                    </div>
         </div>
+       
       </div>
       <hr />
       <div className="row container similar-products">
