@@ -10,45 +10,60 @@ const Expolre = () => {
         
         <div className="container p-2 m-2">
           <h1 className="text-center text-success show p-2">""Explore""</h1>
-          <div className="row">
+          <div className="row  p-4 m-4">
                 {/*Start Explore  */}
                 {/* First Exploring */}
+
+                <div className="col-md-6">
                 <div className="card" style={{width: '18rem'}}>
-  <img src="..." className="card-img-top" alt="..." />
+  <img src={pant1} className="card-img-top" alt="..." height="250px" />
   <div className="card-body">
     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
 </div>
 {/* End First Exploring */}
-
-{/* 2nd Exploring */}
-                <div className="card" style={{width: '18rem'}}>
-  <img src="..." className="card-img-top" alt="..." />
+                </div>
+                
+                <div className="col-md-6">
+                 {/* 2nd Exploring */}
+<div className="card" style={{width: '18rem'}}>
+  <img src={pant2} className="card-img-top" alt="..." height="250px" />
   <div className="card-body">
     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
 </div>
 {/*  End 2nd Exploring */}
+                </div>
 
-{/* 3rd Explore */}
-                <div className="card" style={{width: '18rem'}}>
-  <img src="..." className="card-img-top" alt="..." />
+
+
+
+
+                {/* End Explore */}
+          </div>
+          <div className="row p-4 m-4">
+              <div className="col-md-6">
+                {/* 3rd Explore */}
+<div className="card" style={{width: '18rem'}}>
+  <img src={shirt1} className="card-img-top" alt="..." height="250px" />
   <div className="card-body">
     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
 </div>
 {/*  End 3rd Explore */}
-{/* 4th Explore */}
-                <div className="card" style={{width: '18rem'}}>
-  <img src="..." className="card-img-top" alt="..." />
+
+              </div>
+              <div className="col-md-6">
+             {/* 4th Explore */}
+<div className="card" style={{width: '18rem'}}>
+  <img src={shirt2} className="card-img-top" alt="..." height="250px" />
   <div className="card-body">
     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
 </div>
 {/*  End 4ths Explore */}
 
-
-                {/* End Explore */}
+              </div>
           </div>
         </div>
        
