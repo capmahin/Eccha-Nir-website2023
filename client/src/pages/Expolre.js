@@ -1,4 +1,9 @@
-import React from 'react'
+import React from 'react' 
+import pant1 from "../assists/Explore/pant-1.avif" 
+import pant2 from "../assists/Explore/pant-2.avif" 
+import shirt1 from "../assists/Explore/t-shirt1.avif" 
+import shirt2 from "../assists/Explore/t-shirt2.avif" 
+
 
 const Expolre = () => {
   return (
@@ -40,7 +45,7 @@ const Expolre = () => {
     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
 </div>
-{/*  End 4th Explore */}
+{/*  End 4ths Explore */}
 
 
                 {/* End Explore */}
