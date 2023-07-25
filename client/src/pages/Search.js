@@ -22,6 +22,8 @@ const Search = () => {
                   src={`/api/v1/product/product-photo/${p._id}`}
                   className="card-img-top"
                   alt={p.name}
+                  onClick={() => navigate(`/product/${p.slug}`)}
+                  
                 />
                 <div className="card-body">
                 <h5 className="card-title">Name: {p.name}</h5>
@@ -29,7 +31,7 @@ const Search = () => {
                     <p className="card-text">Description: {p.description}</p>
                     <p className="card-text">Quantity: {p.quantity}</p>
                     <p className="card-text">Price: {p.price}Taka</p>
-                  <button class="btn btn-success ms-1" onClick={() => navigate(`/product/${p.slug}`)}>More Details</button>
+                  {/* <button class="btn btn-success ms-1" onClick={() => navigate(`/product/${p.slug}`)}>More Details</button> */}
                   
                 </div>
               </div>
