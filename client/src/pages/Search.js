@@ -20,6 +20,7 @@ const Search = () => {
               <div className="card m-2" style={{ width: "18rem" }}>
                 <img
                   src={`/api/v1/product/product-photo/${p._id}`}
+                  height={"150px"}
                   className="card-img-top"
                   alt={p.name}
                   onClick={() => navigate(`/product/${p.slug}`)}
