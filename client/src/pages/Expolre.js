@@ -10,7 +10,7 @@ import shirt3 from "../assists/Explore/t-shirt3.avif"
 const Expolre = () => {
   return (
         
-        <div className="container p-5 m-5">
+        <div className="container-fluid p-5 m-5">
           <h1 className="text-center text-success show p-2">""Explore""</h1>
           <div className="row  p-5 m-5">
                 {/*Start Explore  */}
