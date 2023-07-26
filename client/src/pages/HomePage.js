@@ -166,10 +166,10 @@ const HomePage = () => {
     <Layout>
       <Banner/>
        <div className="container-fluid row mt-3 home-page">
-        <div className="col-md-3 p-4 filters">
+        <div className="col-md-4 p-4 filters">
         {/* Filter Start ??? */}
-          <h5 className="text-center text-success ">Address</h5>
-          <div className="d-flex flex-column">
+          {/* <h5 className="text-center text-success p-2 ">Address</h5> */}
+          <div className="d-flex flex-column mt-5 ">
           <div className="card" style={{width: '18rem'}}>
           <img src={address} className="card-img-top" alt="..." height={"50px"} />
           <div className="card-body">
@@ -178,20 +178,20 @@ const HomePage = () => {
           </div>
           </div> 
            {/* price filter */}
-           <h5 className="text-center text-success mt-4">Contact</h5> 
-          <div className="d-flex flex-column">
-          <div className="card" style={{width: '18rem'}}>
+           {/* <h5 className="text-center text-success mt-4">Contact</h5>  */}
+          <div className="d-flex flex-column mt-4 ">
+          <div className="card " style={{width: '18rem'}}>
           <img src={contact} className="card-img-top" alt="..." height={"50px"} />
           <div className="card-body">
-          <p className="text-justify mt-2 p-2">
+          <p className="text-justify mt-1 p-1">
             any query and info about product feel free to call anytime we 24X7
             available
 
           </p>
-          <p className="mt-3">
+          <p className="mt-1">
             <BiMailSend /> : www.ecchenir.com
           </p>
-          <p className="mt-3">
+          <p className="mt-1">
             <BiPhoneCall /> : 01303-347695
           </p>
            </div>
@@ -208,7 +208,7 @@ const HomePage = () => {
 
         {/* Filter End ????? */}
         </div>
-        <div className="col-md-9">
+        <div className="col-md-8">
           <h1 className="text-center">!! Ecche Nir Products !!</h1>
           <div className="d-flex flex-wrap">
           {products?.map((p) => (

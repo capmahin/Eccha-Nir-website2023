@@ -5,12 +5,13 @@ import pant3 from "../assists/Explore/pant-3.avif"
 import shirt1 from "../assists/Explore/t-shirt1.avif" 
 import shirt2 from "../assists/Explore/t-shirt2.avif" 
 import shirt3 from "../assists/Explore/t-shirt3.avif" 
+import "../styles/Explore.css";
 
 
 const Expolre = () => {
   return (
         
-        <div className="container-fluid p-5 m-5">
+        <div className="container-fluid row mt-3 explore">
           <h1 className="text-center text-success show p-2">""Explore""</h1>
           <div className="row  p-5 m-5">
                 {/*Start Explore  */}
