@@ -12,6 +12,8 @@ import ShowCategories from "./ShowCategories";
 import Expolre from "./Expolre";
 import { useCart } from "../context/cart";
 import toast from "react-hot-toast";
+import address from "../assists/HomePG/address.png"
+import contact from "../assists/HomePG/contact.png"
 
 
 
@@ -168,21 +170,21 @@ const HomePage = () => {
           <h6 className="text-center">Address</h6>
           <div className="d-flex flex-column">
           <div className="card" style={{width: '18rem'}}>
-  <img src="" className="card-img-top" alt="..." height="250px" />
-  <div className="card-body">
-    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-</div>
+          <img src={address} className="card-img-top" alt="..." height="250px" />
+          <div className="card-body">
+          <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+          </div>
           </div> 
            {/* price filter */}
            <h6 className="text-center mt-4">Contact</h6> 
           <div className="d-flex flex-column">
           <div className="card" style={{width: '18rem'}}>
-  <img src="" className="card-img-top" alt="..." height="250px" />
-  <div className="card-body">
-    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-</div>
+          <img src={contact} className="card-img-top" alt="..." height="250px" />
+          <div className="card-body">
+          <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+           </div>
+            </div>
           </div>
           {/* <div className="d-flex flex-column">
             <button
