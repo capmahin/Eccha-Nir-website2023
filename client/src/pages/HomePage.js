@@ -14,6 +14,7 @@ import { useCart } from "../context/cart";
 import toast from "react-hot-toast";
 import address from "../assists/HomePG/address.png"
 import contact from "../assists/HomePG/contact.png"
+import { BiMailSend, BiPhoneCall } from "react-icons/bi";
 
 
 
@@ -167,22 +168,32 @@ const HomePage = () => {
        <div className="container-fluid row mt-3 home-page">
         <div className="col-md-3 p-4 filters">
         {/* Filter Start ??? */}
-          <h6 className="text-center">Address</h6>
+          <h5 className="text-center text-success ">Address</h5>
           <div className="d-flex flex-column">
           <div className="card" style={{width: '18rem'}}>
-          <img src={address} className="card-img-top" alt="..." height="250px" />
+          <img src={address} className="card-img-top" alt="..." height={"50px"} />
           <div className="card-body">
           <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
           </div>
           </div>
           </div> 
            {/* price filter */}
-           <h6 className="text-center mt-4">Contact</h6> 
+           <h5 className="text-center text-success mt-4">Contact</h5> 
           <div className="d-flex flex-column">
           <div className="card" style={{width: '18rem'}}>
-          <img src={contact} className="card-img-top" alt="..." height="250px" />
+          <img src={contact} className="card-img-top" alt="..." height={"50px"} />
           <div className="card-body">
-          <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <p className="text-justify mt-2 p-2">
+            any query and info about product feel free to call anytime we 24X7
+            available
+
+          </p>
+          <p className="mt-3">
+            <BiMailSend /> : www.ecchenir.com
+          </p>
+          <p className="mt-3">
+            <BiPhoneCall /> : 01303-347695
+          </p>
            </div>
             </div>
           </div>
