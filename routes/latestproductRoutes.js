@@ -2,28 +2,29 @@ import express from 'express'
 import { isAdmin, requireSignIn } from "../middlewares/authMiddleware.js";
 
 import formidable from 'express-formidable';
+import { LatestProductPhotoController, createLatestProductController, deleteLatestProductController, getLatestProductController, getSingleLatestProductController, updateLatestProductController } from "../controllers/latestproductController.js";
 
 const router = express.Router();
 
 //routes
 
 //create LatestProduct
-router.post('/create-latestproduct', requireSignIn,isAdmin,formidable(), createLatestproductController);
+router.post('/create-latestproduct', requireSignIn,isAdmin,formidable(), createLatestProductController);
 //Update product
-router.put('/update-latestproduct/:pid', requireSignIn,isAdmin,formidable(), updateLatestproductController);
+router.put('/update-latestproduct/:pid', requireSignIn,isAdmin,formidable(), updateLatestProductController);
 
 //get products
-router.get('/get-latestproduct',getLatestproductController);
+router.get('/get-latestproduct',getLatestProductController);
 
 //single products
 
-router.get('/get-latestproduct/:slug',getSingleLatestproductController);
+router.get('/get-latestproduct/:slug',getSingleLatestProductController);
 
 //get photo
-router.get('/latestproduct-photo/:pid',LatestproductPhotoController);
+router.get('/latestproduct-photo/:pid',LatestProductPhotoController);
 
 //delete product
-router.delete('/delete-latestproduct/:pid',deleteLatestproductController);
+router.delete('/delete-latestproduct/:pid',deleteLatestProductController);
 
 // //filter product
 // router.post("/product-filters", productFiltersController);
