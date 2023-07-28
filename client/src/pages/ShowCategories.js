@@ -6,7 +6,7 @@ const ShowCategories = () => {
   const categories = useCategory();
   return (
       
-      <div className="p-2">
+      <div className="p-2 ">
         <h3 className=" p-1 show">""All Categories""</h3>
         <div className="row container">
           {categories.map((c) => (
