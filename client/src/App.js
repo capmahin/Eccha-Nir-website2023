@@ -32,6 +32,7 @@ import CreateOrder from "./pages/CreateOrder";
 import UpdateOrders from "./pages/Admin/UpdateOrders";
 import OrdersShow from "./pages/user/OrdersShow";
 import CreateLatestproduct from "./pages/Admin/CreateLatestproduct";
+import Latestproducts from "./pages/Admin/Latestproducts";
 
 
 function App() {
@@ -62,6 +63,7 @@ function App() {
           <Route path="admin/order/:slug" element={<UpdateOrders/>}/>
          
           <Route path="admin/products" element={<Products />} />
+          <Route path="admin/latestproducts" element={<Latestproducts />} />
           <Route path="admin/orders" element={<Orders />} />
           <Route path="admin/banners" element={<Banners />} />
           <Route path="admin/users" element={<Users/>}/>
