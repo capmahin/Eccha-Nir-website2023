@@ -47,14 +47,14 @@ const CreateLatestproduct = () => {
       productData.append("photo", photo);
       productData.append("category", category);
       const { data } = axios.post(
-        "/api/v1/product/create-product",
+        "/api/v1/latestproduct/create-latestproduct",
         productData
       );
       if (data?.success) {
         toast.error(data?.message);
       } else {
         toast.success("Product Created Successfully");
-        navigate("/dashboard/admin/products");
+        navigate("/dashboard/admin/latestproducts");
       }
     } catch (error) {
       console.log(error);
