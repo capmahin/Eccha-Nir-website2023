@@ -13,7 +13,7 @@ const LatestProduct = () => {
     //getall products
   const getAllProducts = async () => {
     try {
-      const { data } = await axios.get("/api/v1/product/get-product");
+      const { data } = await axios.get("/api/v1/latestproduct/get-latestproduct");
       setProducts(data.products);
     } catch (error) {
       console.log(error);
@@ -29,11 +29,11 @@ const LatestProduct = () => {
     <div>
          <h3 className="show p-2">""Latest Product""</h3>
     <div className="d-flex flex-wrap home-page">
-    {products?.splice(0,4).map((p) => (
+    {products?.map((p) => (
              
              <div className="card m-2" key={p._id} style={{ width: "18rem" }}>
                <img
-                 src={`/api/v1/product/product-photo/${p._id}`}
+                 src={`/api/v1/latestproduct/latestproduct-photo/${p._id}`}
                  className="card-img-top"
                  height={"150px"}
                  alt={p.name}
@@ -47,7 +47,7 @@ const LatestProduct = () => {
                  <p className="card-text">Quantity: {p.quantity}</p> */}
                  
                  <div>
-                <button className="btn btn-success ms-1" onClick={() => navigate(`/product/${p.slug}`)}>More Details</button>
+                <button className="btn btn-success ms-1" onClick={() => navigate(`/latestproduct/${p.slug}`)}>More Details</button>
                 
                </div>
 
