@@ -37,4 +37,4 @@ const latestProductSchema = new mongoose.Schema({
 
 },{timestamps:true})
 
-export default mongoose.model('latestProducts', latestProductSchema)
+export default mongoose.model('LatestProducts', latestProductSchema)
