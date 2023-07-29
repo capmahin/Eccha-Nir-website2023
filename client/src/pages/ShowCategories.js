@@ -7,7 +7,7 @@ const ShowCategories = () => {
   return (
       
       <div className="p-2 ">
-        <h3 className=" p-1 show">""All Categories""</h3>
+        <h3 className=" p-3 m-3 text-center show">""All Categories""</h3>
         <div className="row container">
           {categories.map((c) => (
             <div className="col-md-4 mt-5 mb-3 gx-3 gy-3" key={c._id}>

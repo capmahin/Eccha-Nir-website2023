@@ -27,10 +27,22 @@ const LatestProduct = () => {
   }, []);
   return (
     <div>
-         <h3 className="show p-2">""Latest Product""</h3>
-    <div className="d-flex flex-wrap home-page">
-    {products?.map((p) => (
+         <h3 className="show p-2 text-center">""Latest Product""</h3>
+
+    {/* Carusol Start */}
+          
+    <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel">
+  
+    
+    
+    <div className="carousel-inner">
+       <div className="carousel-item active">
+             <div className="d-flex flex-wrap home-page m-3 p-3">
              
+             
+            
+    {products?.splice(0,5).map((p) => (
+       
              <div className="card m-2" key={p._id} style={{ width: "18rem" }}>
                <img
                  src={`/api/v1/latestproduct/latestproduct-photo/${p._id}`}
@@ -53,9 +65,31 @@ const LatestProduct = () => {
 
                </div>
              </div>
-           
+             
          ))}
-          </div>
+         </div>
+             </div>
+             </div>
+  
+  
+  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span className="carousel-control-prev-icon" aria-hidden="true" />
+    <span className="visually-hidden">Previous</span>
+  </button>
+  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span className="carousel-control-next-icon" aria-hidden="true" />
+    <span className="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+    {/* Carusol End */}
+
+
+
+    
+
+          
     </div>
   )
 }

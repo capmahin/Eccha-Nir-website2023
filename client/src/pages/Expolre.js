@@ -12,7 +12,7 @@ const Expolre = () => {
   return (
         
         <div className="container-fluid row mt-3 explore">
-          <h1 className="text-center text-success show p-2">""Explore""</h1>
+          <h2 className="text-center  show p-2">""Explore""</h2>
           <div className="row  p-5 m-5">
                 {/*Start Explore  */}
                 {/* First Exploring */}
