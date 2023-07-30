@@ -24,7 +24,7 @@ const LatestProductDetails = () => {
         `/api/v1/latestproduct/get-latestproduct/${params.slug}`
       );
       setProduct(data?.product);
-      getSimilarProduct(data?.product._id, data?.product.category._id);
+    //   getSimilarProduct(data?.product._id, data?.product.category._id);
     } catch (error) {
       console.log(error);
     }
