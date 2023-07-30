@@ -36,19 +36,20 @@ const LatestProduct = () => {
     
     
     <div className="carousel-inner">
-       <div className="carousel-item active">
-             <div className="d-flex flex-wrap home-page m-3 p-3">
-             
-             
-            
-    {products?.splice(0,5).map((p) => (
        
+    <div className="carousel-item active">     
+    <div className="d-flex flex-wrap home-page m-3 p-3">   
+    {products?.splice(0,5).map((p) => (
+      
+            
+              
              <div className="card m-2" key={p._id} style={{ width: "18rem" }}>
                <img
                  src={`/api/v1/latestproduct/latestproduct-photo/${p._id}`}
                  className="card-img-top"
                  height={"150px"}
                  alt={p.name}
+                 onClick={() => navigate(`/latestproduct/${p.slug}`)}
                />
                <div className="card-body">
                  <div className="card-name-price"><h5 className="card-title">Name: {p.name}</h5>
@@ -59,16 +60,18 @@ const LatestProduct = () => {
                  <p className="card-text">Quantity: {p.quantity}</p> */}
                  
                  <div>
-                <button className="btn btn-success ms-1" onClick={() => navigate(`/latestproduct/${p.slug}`)}>More Details</button>
+                {/* <button className="btn btn-success ms-1" >More Details</button> */}
                 
                </div>
 
                </div>
              </div>
              
+            
          ))}
          </div>
-             </div>
+          </div>
+             
              </div>
   
   
