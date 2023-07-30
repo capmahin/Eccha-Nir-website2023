@@ -34,6 +34,7 @@ import OrdersShow from "./pages/user/OrdersShow";
 import CreateLatestproduct from "./pages/Admin/CreateLatestproduct";
 import Latestproducts from "./pages/Admin/Latestproducts";
 import UpdateLatestproducts from "./pages/Admin/UpdateLatestproducts";
+import LatestProductDetails from "./pages/LatestProductDetails";
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
       <Routes>
         <Route path="/"  element={<HomePage/>}/>
         <Route path="/product/:slug" element={<ProductDetails />} />
+        <Route path="/latestproduct/:slug" element={<LatestProductDetailsProductDetails />} />
         <Route path="/cart" element={<CartPage />} />
         <Route path="/CreateOrder" element={<CreateOrder />} />
         <Route path="/categories" element={<Categories />} />
