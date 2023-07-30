@@ -39,7 +39,7 @@ const LatestProduct = () => {
        
     <div className="carousel-item active">     
     <div className="d-flex flex-wrap home-page m-3 p-3">   
-    {products?.splice(0,5).map((p) => (
+    {products?.map((p) => (
       
             
               
