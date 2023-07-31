@@ -275,7 +275,10 @@ const HomePage = () => {
        </div>
        <LatestProduct/>
        <ShowCategories/>
-       <Expolre/>
+       {/* Explore Start */}
+       {/* <Expolre/> */}
+
+       {/* Expolore End */}
     </Layout>
   )
 }

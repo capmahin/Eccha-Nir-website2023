@@ -232,7 +232,7 @@ const CreateOrder = () => {
                   <Option value="0">M</Option>
                   <Option value="1">L</Option>
                   <Option value="2">XL</Option>
-                  <Option value="3">XXl</Option>
+                 
                 </Select>
                 
 
@@ -246,7 +246,8 @@ const CreateOrder = () => {
                   onChange={(e) => setQuantity(e.target.value)}
                 />
               </div>
-              <div className="mb-3">
+            {/* Shipment */}
+              {/* <div className="mb-3">
                 <Select
                   bordered={false}
                   placeholder="Select Shipping "
@@ -260,7 +261,8 @@ const CreateOrder = () => {
                   <Option value="0">No</Option>
                   <Option value="1">Yes</Option>
                 </Select>
-              </div>
+              </div> */}
+              {/* Shipment end */}
               <div className="mb-3">
                 <button className="btn btn-success" onClick={handleCreate}>
                   Order
