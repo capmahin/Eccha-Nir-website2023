@@ -17,11 +17,11 @@ const Footer = () => {
     <div className="row mt-3">
       {/*Grid column*/}
       <div className="col-lg-4 col-md-12 mb-4 mb-md-0">
-        <h5 className="text-uppercase mb-4">About company</h5>
+        {/* <h5 className="text-uppercase mb-4">About company</h5>
         <p>
         আপনার কষ্টের টাকায় সঠিক পন্য প্রদানে আমরা প্রতিশ্রুতিওবদ্ধ ।
 Always Stay as With EccheNir
-        </p>
+        </p> */}
         
         <div className="mt-1 text-dark">
           {/* Facebook */}
@@ -45,10 +45,10 @@ Always Stay as With EccheNir
       {/*Grid column*/}
       {/*Grid column*/}
       <div className="col-lg-4 col-md-6 mb-4 mb-md-0">
-        <h5 className="text-uppercase mb-4">Opening hours</h5>
+        {/* <h5 className="text-uppercase mb-4">Opening hours</h5> */}
         <table className="table text-center text-dark">
           <tbody className="font-weight-normal">
-            <tr>
+            {/* <tr>
               <td>Mon - Thu:</td>
               <td>8am - 9pm</td>
             </tr>
@@ -59,7 +59,7 @@ Always Stay as With EccheNir
             <tr>
               <td>Sunday:</td>
               <td>9am - 10pm</td>
-            </tr>
+            </tr> */}
           </tbody>
         </table>
       </div>
