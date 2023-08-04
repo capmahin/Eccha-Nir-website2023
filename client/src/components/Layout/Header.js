@@ -109,13 +109,11 @@ const Header = () => {
       </ul>
      
     </div>
-    
                 <Badge count={cart?.length} showZero>
                   <NavLink to="/cart" className="nav-link">
                   🛒
                   </NavLink>
                 </Badge>
-             
   </div>
 </nav>
 
