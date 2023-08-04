@@ -167,7 +167,7 @@ const HomePage = () => {
       <Banner/>
        <div className="container-fluid row mt-3 home-page">
        <h2 className="p-2 text-center show">!! Ecche Nir Products !!</h2>
-        <div className="col-md-4 p-4 filters">
+        <div className=" col-md-4 p-4 filters">
         {/* Filter Start ??? */}
           {/* <h5 className="text-center text-success p-2 ">Address</h5> */}
           <div className="d-flex flex-column mt-5 ">
@@ -209,7 +209,7 @@ const HomePage = () => {
 
         {/* Filter End ????? */}
         </div>
-        <div className="col-md-8">
+        <div className="col-md-8 ">
           
           <div className="d-flex flex-wrap">
           {products?.map((p) => (
