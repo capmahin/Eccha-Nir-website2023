@@ -12,7 +12,7 @@ const CreateOrder = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [bkash, setBkash] = useState("");
+  
   const [address, setAddress] = useState("");
   const [currieraddress, setCurrieraddress] = useState("");
   const [size, setSize] = useState("");
@@ -20,7 +20,7 @@ const CreateOrder = () => {
   const [quantity, setQuantity] = useState("");
   const [shipping, setShipping] = useState("");
   const [serial, setSerial] = useState("");
-  const [pobox, setPobox] = useState("");
+  
   
   // const [id, setId] = useState("");
   // const [photo, setPhoto] = useState("");
@@ -51,13 +51,13 @@ const CreateOrder = () => {
       productData.append("name", name);
       productData.append("email", email);
       productData.append("phone", phone);
-      productData.append("bkash", bkash);
+    
       productData.append("address", address);
       productData.append("currieraddress", currieraddress);
       productData.append("size", size);
       productData.append("quantity", quantity);
       productData.append("serial", serial);
-      productData.append("pobox", pobox);
+      
       // productData.append("photo", photo);
       productData.append("category", category);
       const { data } = axios.post(
@@ -173,15 +173,7 @@ const CreateOrder = () => {
                   onChange={(e) => setPhone(e.target.value)}
                 />
               </div>
-              <div className="mb-3">
-                <input
-                  type="number"
-                  value={bkash}
-                  placeholder="write a bkash"
-                  className="form-control"
-                  onChange={(e) => setBkash(e.target.value)}
-                />
-              </div>
+              
               <div className="mb-3">
                 <input
                   type="number"
@@ -191,15 +183,7 @@ const CreateOrder = () => {
                   onChange={(e) => setSerial(e.target.value)}
                 />
               </div>
-              <div className="mb-3">
-                <input
-                  type="number"
-                  value={pobox}
-                  placeholder="write your PO-Box address"
-                  className="form-control"
-                  onChange={(e) => setPobox(e.target.value)}
-                />
-              </div>
+              
               <div className="mb-3">
                 <textarea
                   type="text"
@@ -213,7 +197,7 @@ const CreateOrder = () => {
                 <textarea
                   type="text"
                   value={currieraddress}
-                  placeholder="write a currieraddress"
+                  placeholder="write a Police Station"
                   className="form-control"
                   onChange={(e) => setCurrieraddress(e.target.value)}
                 />
