@@ -14,7 +14,7 @@ const UpdateOrders = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [bkash, setBkash] = useState("");
+  
   const [address, setAddress] = useState("");
   const [currieraddress, setCurrieraddress] = useState("");
   const [size, setSize] = useState("");
@@ -34,7 +34,7 @@ const UpdateOrders = () => {
       setId(data.product._id);
       setEmail(data.product.email);
       setPhone(data.product.phone);
-      setBkash(data.product.bkash);
+      
       setAddress(data.product.address);
       setCurrieraddress(data.product.currieraddress);
       setSize(data.product.size);
@@ -74,7 +74,7 @@ const UpdateOrders = () => {
       productData.append("name", name);
       productData.append("email", email);
       productData.append("phone", phone);
-      productData.append("bkash", bkash);
+     
       productData.append("address", address);
       productData.append("currieraddress", currieraddress);
       productData.append("size", size);
@@ -172,16 +172,7 @@ const UpdateOrders = () => {
                   disabled
                 />
               </div>
-              <div className="mb-3">
-                <input
-                  type="number"
-                  value={bkash}
-                  placeholder="write a bkash"
-                  className="form-control"
-                  onChange={(e) => setBkash(e.target.value)}
-                  disabled
-                />
-              </div>
+             
               <div className="mb-3">
                 <textarea
                   type="text"
@@ -196,7 +187,7 @@ const UpdateOrders = () => {
                 <textarea
                   type="text"
                   value={currieraddress}
-                  placeholder="write a currieraddress"
+                  placeholder="write a Police Station"
                   className="form-control"
                   onChange={(e) => setCurrieraddress(e.target.value)}
                   disabled
