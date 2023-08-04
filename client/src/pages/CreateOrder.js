@@ -82,8 +82,8 @@ const CreateOrder = () => {
     <div className="row">
       
       <div>
-        <h1>Orders</h1>
-        <div className="m-1 w-75">
+        <h2 className="text-center text-success"> Create-Orders</h2>
+        <div className="m-2 p-4 w-75">
            <Select
                 bordered={false}
                 placeholder="Select a category"
@@ -231,10 +231,10 @@ const CreateOrder = () => {
                 />
               </div>
             {/* Shipment */}
-              {/* <div className="mb-3">
+              <div className="mb-3">
                 <Select
                   bordered={false}
-                  placeholder="Select Shipping "
+                  placeholder="Order Confirm "
                   size="large"
                   showSearch
                   className="form-select mb-3"
@@ -245,7 +245,7 @@ const CreateOrder = () => {
                   <Option value="0">No</Option>
                   <Option value="1">Yes</Option>
                 </Select>
-              </div> */}
+              </div>
               {/* Shipment end */}
               <div className="mb-3">
                 <button className="btn btn-success" onClick={handleCreate}>

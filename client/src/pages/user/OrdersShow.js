@@ -34,10 +34,10 @@ const OrdersShow = () => {
             </h1>
             <h4 className="text-center">
               {order?.length
-                ? `You Have ${order.length} items in your cart ${
+                ? `You Have ${order.length} items in your Order ${
                     auth?.token ? "" : "please login to checkout"
                   }`
-                : " Your Cart Is Empty"}
+                : " Your Order page Is Empty"}
             </h4>
           </div>
           <div className="col-md-8">
