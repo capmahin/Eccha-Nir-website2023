@@ -110,11 +110,11 @@ const Header = () => {
      
     </div>
                 <div className="py-2 ">
+                <NavLink to="/cart" className="nav-link">
                 <Badge  className="m-2 p-2" count={cart?.length} showZero>
-                  <NavLink to="/cart" className="nav-link">
-                  🛒
-                  </NavLink>
+                 🛒
                 </Badge>
+                </NavLink>
                 </div>
   </div>
 </nav>
